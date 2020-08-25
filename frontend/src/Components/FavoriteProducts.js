@@ -1,8 +1,9 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck'
+import CardDeck from 'react-bootstrap/CardDeck';
+
 const favoriteProducts = () => {
-  const favoriteProducts = [
+  const Products = [
     {
       name: "Indian Spice Tin",
       url: "https://peoplemakeglasgow.com",
@@ -23,11 +24,18 @@ const favoriteProducts = () => {
       imageSrc:
         "https://assetscdn1.paytm.com/images/catalog/product/F/FA/FASTHE-HEALTHY-BIGB9858325D4AB1B1/1566201731833_0..jpg?imwidth=280&impolicy=hq",
         unit_price: 3
+    },
+    {
+      name: "Indian Spice Tin",
+      url: "https://peoplemakeglasgow.com",
+      imageSrc:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRg6f1t3bnWkcHVp94lgxqXOX3OW8Q-mruQyA&usqp=CAU",
+        unit_price: 5
     }
   ];
   return (
     <div id="tourist-info-cards" className="cards">
-      {favoriteProducts.map((product, index) => {
+      {Products.map((product, index) => {
         return (
           <div key={index} >
   <CardDeck>
