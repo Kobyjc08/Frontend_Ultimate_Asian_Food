@@ -1,10 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
+import Company from "./Components/Company.js";
+
 import "./App.css";
 import { Layout } from "./layout/Layout";
 
 function App() {
-  return <Layout>Content</Layout>;
+  return (
+    <Layout>
+      <Company />
+    </Layout>
+  );
 }
 
 export default App;

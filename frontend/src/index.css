@@ -1,13 +1,54 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* ehsan-Company-component*/
+.heading-company {
+  text-align: center;
+}
+.container-company {
+  display: flex;
+  justify-content: space-around;
+}
+.container-about-company {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.centered-about-company {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-container-about-company {
+  width: 100%;
+}
+
+.container-faq-company {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.centered-faq-company {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-container-faq-company {
+  width: 100%;
+}
+/* ehsan-Company-component-end*/
