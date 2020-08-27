@@ -34,6 +34,8 @@ const favoriteProducts = () => {
     }
   ];
   return (
+    <div>
+      <h2 className="red_letters">Products</h2>
     <div id="tourist-info-cards" className="cards">
       {Products.map((product, index) => {
         return (
@@ -55,6 +57,7 @@ const favoriteProducts = () => {
 </div>
         );
       })}
+    </div>
     </div>
   );
 };
