@@ -1,6 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
+import productsimg from "../images/productsimg.jpeg"
 
 const favoriteProducts = () => {
   const Products = [
@@ -35,6 +36,9 @@ const favoriteProducts = () => {
   ];
   return (
     <div>
+      <div className="imgproduct">
+      <img  src={productsimg} alt="product" ></img>
+      </div>
       <h2 className="red_letters">Products</h2>
     <div id="tourist-info-cards" className="cards">
       {Products.map((product, index) => {
