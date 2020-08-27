@@ -39,7 +39,7 @@
   }
 }
 
-
+/* Jorge Css */
 .cards {
   display: flex;
   align-content: space-between;
@@ -47,11 +47,11 @@
   justify-content: space-evenly;
  }
 
- .cardImage {
+ .card-image {
    width: 10rem;
    height: 18rem;
  }
- .cardInfo {
+ .card-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -59,14 +59,14 @@
 
  }
 
- .red_letters {
+ .red-letters {
    display: flex;
    justify-content: center;
    align-content: center;
    color: #8d1a20;
  }
 
- .imgproduct {
+ .img-product {
    display: flex;
    justify-content: center;
    
