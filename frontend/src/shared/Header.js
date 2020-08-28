@@ -1,5 +1,6 @@
 import React from "react";
 import logoLg from "../images/logo_190x104.jpg";
+import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
   return (
     <header className="header mb-5">
@@ -12,7 +13,7 @@ export const Header = () => {
               className="d-none d-md-inline-block"
             />
             <img
-              src="img/logo_120x67.jpg"
+              src={logoSm}
               alt="The Ultimate Asian Food Eshop Logo"
               className="d-inline-block d-md-none"
             />
