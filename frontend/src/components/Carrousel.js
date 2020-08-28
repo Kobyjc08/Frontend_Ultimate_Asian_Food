@@ -27,11 +27,6 @@ const CarouselComponent = () => (
       src={thirdcarousel}
       alt="Third slide"
     />
-
-    <Carousel.Caption>
-      <h3></h3>
-      <p></p>
-    </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
 </div>

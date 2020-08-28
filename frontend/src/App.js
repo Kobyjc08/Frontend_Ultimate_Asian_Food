@@ -1,8 +1,8 @@
 import React from "react";
 import Carrousel from './components/Carrousel';
 import {Container} from 'react-bootstrap'
-import logo from "./logo.svg";
 import FavoriteProducts from "./components/FavoriteProducts.js";
+import Company from "./components/Company.js";
 
 import "./App.css";
 import { Layout } from "./layout/Layout";
@@ -13,7 +13,7 @@ function App() {
     <Carrousel />
     </Container>
     <FavoriteProducts />
-
+    <Company />
   </Layout>;
 }
 
