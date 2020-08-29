@@ -6,7 +6,7 @@ const Company = () => {
   return (
     <div className="company-main">
       <div className="heading-company">
-        <h1>!!!!COMPANY!!!!</h1>
+        <h1 className="red-letters">COMPANY</h1>
       </div>
 
       <div className="container-company">

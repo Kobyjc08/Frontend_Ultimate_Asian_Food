@@ -39,8 +39,8 @@ const favoriteProducts = () => {
       <div className='img-product'>
         <img src={productsimg} alt='product'></img>
       </div>
-      <h2 className='red-letters'>Products</h2>
-      <div id='tourist-info-cards' className='cards'>
+      <h2 className='red-letters'>PRODUCTS</h2>
+      <div id='favorite-products-cards' className='cards'>
         {Products.map((product, index) => {
           return (
             <div key={index}>

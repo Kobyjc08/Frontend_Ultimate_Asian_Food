@@ -1,17 +1,20 @@
 import React from "react";
-import Company from "./Components/Company.js";
-import FavoriteProducts from "./Components/FavoriteProducts.js";
+import Carrousel from './components/Carrousel';
+import {Container} from 'react-bootstrap';
+import FavoriteProducts from "./components/FavoriteProducts.js";
+import Company from "./components/Company.js";
 
 import "./App.css";
 import { Layout } from "./layout/Layout";
 
 function App() {
-  return (
-    <Layout>
-      <FavoriteProducts />
-      <Company />
-    </Layout>
-  );
+  return <Layout>
+    <Container fluid className="carrousel_wrap">
+    <Carrousel />
+    </Container>
+    <FavoriteProducts />
+    <Company />
+  </Layout>;
 }
 
 export default App;

@@ -64,10 +64,18 @@
    justify-content: center;
    align-content: center;
    color: #8d1a20;
+   font-size: 2rem;
+   padding: 1rem;
  }
 
  .img-product {
    display: flex;
    justify-content: center;
-   
+   margin-top: 5rem;
+ }
+
+ .favorite-products-cards{
+   display: flex;
+   padding: 10rem;
+   margin: 10rem;
  }
