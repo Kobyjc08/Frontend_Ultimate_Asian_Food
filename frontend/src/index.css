@@ -1,7 +1,6 @@
 @import url("./assets/style.default.css");
 @import url("./assets/custom.css");
-@import url("./assets/font-awesome.min.css");
-@import url("./assets/fontawesome-webfont.eot");
+
 
 body {
   margin: 0;
@@ -28,7 +27,7 @@ code {
 }
 .container-company {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 .container-about-company {
   position: relative;
