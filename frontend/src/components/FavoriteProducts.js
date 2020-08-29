@@ -1,7 +1,10 @@
 import React from "react";
+import { Row } from 'react-bootstrap'
+
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import productsimg from "../images/productsimg.jpeg";
+import { Biryani } from "../images/products/products";
 
 const favoriteProducts = () => {
   const Products = [
@@ -15,9 +18,7 @@ const favoriteProducts = () => {
     {
       name: "Biryani Masala",
       url: "https://visitmanchester.com",
-      imageSrc:
-        "https://www.harryharvey.com/Graphics/Std_Product_Images/mangal-biryani-masala-100g-pack-size-full-case-926-p.jpg",
-      unit_price: 3,
+      imageSrc: Biryani,
     },
     {
       name: "Jowar puffs",
@@ -34,42 +35,41 @@ const favoriteProducts = () => {
       unit_price: 5,
     },
   ];
+
   return (
     <div>
       <div className='img-product'>
         <img src={productsimg} alt='product'></img>
       </div>
       <h2 className='red-letters'>PRODUCTS</h2>
-      <div id='favorite-products-cards' className='cards'>
+      <Row id='favorite-products-cards' className='cards'>
         {Products.map((product, index) => {
           return (
-            <div key={index}>
-              <CardDeck>
-                <Card>
-                  <Card.Img
-                    variant='top'
-                    src={product.imageSrc}
-                    className='card-image'
-                  />
-                  <Card.Body>
-                    <Card.Title className='card-info'>
-                      <a
-                        href={product.url}
-                        target='_'
-                        className='btn btn-primary'>
-                        {product.name}
-                      </a>
-                    </Card.Title>
-                    <Card.Text className='card-info'>
-                      <div></div>€<div>{product.unit_price}</div>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </CardDeck>
-            </div>
+            <CardDeck key={index}>
+              <Card>
+                <Card.Img
+                  variant='top'
+                  src={product.imageSrc}
+                  className='card-image'
+                />
+                <Card.Body>
+                  <Card.Title className='card-info'>
+                    <a
+                      href={product.url}
+                      target='_'
+                      className='btn btn-primary'>
+                      {product.name}
+                    </a>
+                  </Card.Title>
+                  <Card.Text className='card-info'>
+                    €{product.unit_price}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </CardDeck>
           );
         })}
-      </div>
+      </Row>
     </div>
   );
 };
