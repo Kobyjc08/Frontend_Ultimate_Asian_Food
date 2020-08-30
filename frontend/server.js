@@ -3,6 +3,7 @@ const app = express();
 const port = 3001
 const { Pool } = require('pg');
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 
 const pool = new Pool({
@@ -14,6 +15,7 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
+app.use(cors());
 
 //CREATE AN ACCOUNT (USER)  => CREATE
 app.post("/signup", function (req, res) {
@@ -158,9 +160,9 @@ app.get("/productsByID/:productid", function (req, res) {
 });
 
 //GET FAVORITE PRODUCTS
-app.get("/favoritos", function (req, res) {
+app.get("/favorites", function (req, res) {
   pool
-  .query('select * from products p2 where p2.id in (13,2,9,4)')
+  .query('select * from products p2 where p2.id in (13,3,9,4)')
   .then(result => res.json(result.rows))
   .catch((e) => console.error(e))
 })

@@ -4,10 +4,56 @@ import { Row } from 'react-bootstrap'
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import productsimg from "../images/productsimg.jpeg";
-import { Biryani } from "../images/products/products";
+import { Biryani, Falooda } from "../images/products/products";
 
-const favoriteProducts = () => {
-  const Products = [
+
+const favoriteProducts = ({data}) => {
+  console.log(Falooda)
+  if (data.length < 1) {
+    return <p>Loading...</p>
+  }
+  return (
+    <div>
+      <div className='img-product'>
+        <img src={productsimg} alt='product'></img>
+      </div>
+      <h2 className='red-letters'>PRODUCTS</h2>
+      <Row id='favorite-products-cards' className='cards'>
+        {data.map((product, index) => {
+          return (
+            <CardDeck key={index}>
+              <Card>
+                <Card.Img
+                  variant='top'
+                  src={product.imageSrc}
+                  className='card-image'
+                />
+                <Card.Body>
+                  <Card.Title className='card-info'>
+                    <a
+                      href={product.url}
+                      target='_'
+                      className='btn btn-primary'>
+                      {product.product_name}
+                    </a>
+                  </Card.Title>
+                  <Card.Text className='card-info'>
+                    €{product.unit_price}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </CardDeck>
+          );
+        })}
+      </Row>
+    </div>
+  );
+};
+
+export default favoriteProducts;
+
+
+/*const Products = [
     {
       name: "Indian Spice Tin",
       url: "https://peoplemakeglasgow.com",
@@ -35,43 +81,4 @@ const favoriteProducts = () => {
       unit_price: 5,
     },
   ];
-
-  return (
-    <div>
-      <div className='img-product'>
-        <img src={productsimg} alt='product'></img>
-      </div>
-      <h2 className='red-letters'>PRODUCTS</h2>
-      <Row id='favorite-products-cards' className='cards'>
-        {Products.map((product, index) => {
-          return (
-            <CardDeck key={index}>
-              <Card>
-                <Card.Img
-                  variant='top'
-                  src={product.imageSrc}
-                  className='card-image'
-                />
-                <Card.Body>
-                  <Card.Title className='card-info'>
-                    <a
-                      href={product.url}
-                      target='_'
-                      className='btn btn-primary'>
-                      {product.name}
-                    </a>
-                  </Card.Title>
-                  <Card.Text className='card-info'>
-                    €{product.unit_price}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </CardDeck>
-          );
-        })}
-      </Row>
-    </div>
-  );
-};
-
-export default favoriteProducts;
+*/
