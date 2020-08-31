@@ -14,6 +14,7 @@ function App() {
     axios.get('http://localhost:3001/favorites')
     .then(function (response) {
       setFavoriteProducts (response.data)
+      console.group(response.data)
     });
   }, [])
 

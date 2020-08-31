@@ -162,7 +162,7 @@ app.get("/productsByID/:productid", function (req, res) {
 //GET FAVORITE PRODUCTS
 app.get("/favorites", function (req, res) {
   pool
-  .query('select * from products p2 where p2.id in (13,3,9,4)')
+  .query('select * from products p2 where p2.id in (11,3,9,4)')
   .then(result => res.json(result.rows))
   .catch((e) => console.error(e))
 })

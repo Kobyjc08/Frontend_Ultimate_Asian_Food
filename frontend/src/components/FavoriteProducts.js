@@ -8,7 +8,6 @@ import { Biryani, Falooda } from "../images/products/products";
 
 
 const favoriteProducts = ({data}) => {
-  console.log(Falooda)
   if (data.length < 1) {
     return <p>Loading...</p>
   }
@@ -25,7 +24,7 @@ const favoriteProducts = ({data}) => {
               <Card>
                 <Card.Img
                   variant='top'
-                  src={product.imageSrc}
+                  src={product.product_pic}
                   className='card-image'
                 />
                 <Card.Body>
