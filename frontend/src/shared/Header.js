@@ -17,7 +17,7 @@ export const Header = () => {
               alt="The Ultimate Asian Food Eshop Logo"
               className="d-inline-block d-md-none"
             />
-            <span className="sr-only">Obaju - go to homepage</span>
+            <span className="sr-only">The Ultimate Asian Food Eshop</span>
           </a>
           <div className="navbar-buttons">
             <button
