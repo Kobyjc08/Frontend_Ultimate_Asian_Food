@@ -4,7 +4,7 @@ import { Row } from 'react-bootstrap'
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import productsimg from "../images/productsimg.jpeg";
-import { Biryani, Falooda } from "../images/products/products";
+import { getImages } from "../images/products/products";
 
 
 const favoriteProducts = ({data}) => {
@@ -24,11 +24,11 @@ const favoriteProducts = ({data}) => {
               <Card>
                 <Card.Img
                   variant='top'
-                  src={product.product_pic}
+                  src={getImages(product.product_pic)}
                   className='card-image'
                 />
                 <Card.Body>
-                  <Card.Title className='card-info'>
+                  <Card.Title>
                     <a
                       href={product.url}
                       target='_'

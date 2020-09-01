@@ -10,8 +10,7 @@ import Fish from './Fish-09.jpg';
 import White from './white-10.jpg';
 import Broast from './Broast-11.jpg';
 
-
-export {
+export const getImages = (image) => ({
   Biryani,
   Falooda,
   Gulab,
@@ -23,5 +22,4 @@ export {
   Fish,
   White,
   Broast
-
-}
+}[ image ?? Broast])
