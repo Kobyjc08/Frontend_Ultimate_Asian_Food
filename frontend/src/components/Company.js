@@ -18,11 +18,7 @@ const Company = () => {
           ></img>
 
           <div className="centered-about-company">
-            <h1>About Us</h1>
-            <h3>A professional e shop for asian food articles in Spain</h3>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text">
-              Read More!
-            </a>
+            
           </div>
         </div>
 
@@ -34,13 +30,6 @@ const Company = () => {
           ></img>
 
           <div className="centered-faq-company">
-            <h1>FAQ</h1>
-            <h3>
-              Answers on a particular topic.The format is often used online.
-            </h3>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text">
-              Read More!
-            </a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap'
 
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-import productsimg from "../images/productsimg.jpeg";
+import productsimg from "../images/productsimg.png";
 import { getImages } from "../images/products/products";
 
 
