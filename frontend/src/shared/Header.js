@@ -47,39 +47,39 @@ export const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Search
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Login" className="nav-link">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Register" className="nav-link">
                   Register
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/About" className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Categories
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/FAQ" className="nav-link">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Contact" className="nav-link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="navbar-buttons d-flex justify-content-end">
