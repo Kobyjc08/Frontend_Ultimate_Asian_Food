@@ -1,4 +1,7 @@
 import React from "react";
+import {
+Link
+} from 'react-router-dom';
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
@@ -6,7 +9,7 @@ export const Header = () => {
     <header className="header mb-5">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a href="index.html" className="navbar-brand home">
+          <Link to="/" className="navbar-brand home">
             <img
               src={logoLg}
               alt="The Ultimate Asian Food Eshop Logo"
@@ -18,7 +21,7 @@ export const Header = () => {
               className="d-inline-block d-md-none"
             />
             <span className="sr-only">Obaju - go to homepage</span>
-          </a>
+          </Link>
           <div className="navbar-buttons">
             <button
               type="button"
@@ -39,44 +42,44 @@ export const Header = () => {
           <div id="navigation" className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a href="#" className="nav-link active">
+                <Link to="/" className="nav-link active">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Search
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Login" className="nav-link">
                   Login
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Register" className="nav-link">
                   Register
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/About" className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Categories
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/FAQ" className="nav-link">
                   FAQ
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link">
+                <Link to="/Contact" className="nav-link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="navbar-buttons d-flex justify-content-end">
