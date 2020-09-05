@@ -30,20 +30,20 @@ export const Footer = () => {
           <div className="col-lg-6 mb-2 mb-lg-0">
             <p className="social text-lg-right">
               <a href="#" className="Mastercard Credit Card">
-                <i className="fa fa-cc-mastercard"></i>
+                <i className="fab fa-cc-mastercard"></i>
               </a>
               <a href="#" className="Visa Credit Card">
-                <i className="fa fa-cc-visa"></i>
+                <i className="fab fa-cc-visa"></i>
               </a>
               <a href="#" className="Paypal Credit Card">
-                <i className="fa fa-cc-paypal"></i>
+                <i className="fab fa-cc-paypal"></i>
               </a>
               <a href="#" className="Amex Credit Card">
-                <i className="fa fa-cc-amex"></i>
+                <i className="fab fa-cc-amex"></i>
               </a>
             </p>
             <p className="text-center text-lg-right">
-              Copyright © The Ultimate Asian Food Eshop
+              <a href="#">Copyright © The Ultimate Asian Food Eshop</a>
             </p>
           </div>
         </div>
