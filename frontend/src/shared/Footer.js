@@ -42,8 +42,8 @@ export const Footer = () => {
                 <i className="fab fa-cc-amex"></i>
               </a>
             </p>
-            <p className="text-center text-lg-right">
-              <a href="#">Copyright © The Ultimate Asian Food Eshop</a>
+            <p className="social_special">
+              Copyright © The Ultimate Asian Food Eshop
             </p>
           </div>
         </div>
