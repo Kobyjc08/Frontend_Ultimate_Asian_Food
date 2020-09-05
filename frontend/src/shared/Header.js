@@ -1,7 +1,5 @@
 import React from "react";
-import {
-Link
-} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
@@ -20,7 +18,7 @@ export const Header = () => {
               alt="The Ultimate Asian Food Eshop Logo"
               className="d-inline-block d-md-none"
             />
-            <span className="sr-only">Obaju - go to homepage</span>
+            <span className="sr-only">The Ultimate Asian Food Eshop</span>
           </Link>
           <div className="navbar-buttons">
             <button
