@@ -501,6 +501,12 @@ h1 {
   line-height: 30px;
 }
 
+#copyright .social_special {
+  text-align: right;
+  vertical-align: bottom;
+  line-height: 30px;
+}
+
 /*
 *
 * ======================================================================
