@@ -100,5 +100,15 @@ code {
   margin: 10rem;
 }
 
-
 /* Jorge Css - end */
+
+/* Ehsan search */
+.topnav input[type="text"] {
+  float: right;
+  padding: 2px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 12px;
+  font-size: 12px;
+}
+/* Ehsan search-end */
