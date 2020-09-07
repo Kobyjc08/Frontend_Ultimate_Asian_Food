@@ -73,6 +73,10 @@ h1 {
   padding-left: 0 !important;
 }
 
+#header-icon {
+  text-align: center;
+}
+
 /*
 *
 * ======================================================================
@@ -2272,6 +2276,12 @@ mark,
   font-size: 0.9rem;
   border-left: 5px solid #4fbfa8;
 }
+.blockquote2 {
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
 
 .blockquote-footer {
   color: #6c757d;
@@ -3268,3 +3278,6 @@ code {
 .dropdown-item:disabled {
   color: #6c757d;
 }
+/*
+ * 11. ICONS
+ */
