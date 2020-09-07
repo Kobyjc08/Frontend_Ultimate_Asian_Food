@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
-import { Container } from "react-bootstrap";
+import { Container,Breadcrumb  } from "react-bootstrap";
 import aboutImage from "../images/about_us_main_xl.jpg";
 import productsimg from "../images/about_us_icon.png";
 
@@ -8,6 +8,10 @@ const About = () => {
   return (
     <Layout>
       <Container>
+       <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>About</Breadcrumb.Item>
+        </Breadcrumb>
         <div className='img-product'>
           <img src={productsimg} alt='About Us Icon' />
         </div>

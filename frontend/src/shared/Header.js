@@ -1,4 +1,5 @@
 import React from "react";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
@@ -44,11 +45,11 @@ export const Header = () => {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="#" className="nav-link">
                   Search
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/Login" className="nav-link">
                   Login
@@ -64,11 +65,7 @@ export const Header = () => {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="#" className="nav-link">
-                  Categories
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <Link to="/FAQ" className="nav-link">
                   FAQ
@@ -80,6 +77,24 @@ export const Header = () => {
                 </Link>
               </li>
             </ul>
+            {/* <div className="topnav">
+              <input
+                className="nav-item"
+                type="text"
+                placeholder="Search.."
+              ></input>
+            </div> */}
+
+            <div className="navbar-buttons d-flex justify-content-end">
+              <Dropdown>
+                <DropdownButton id="dropdown-item-button" title="Categories">
+                  <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
+                  <Dropdown.Item as="button">Action</Dropdown.Item>
+                  <Dropdown.Item as="button">Another action</Dropdown.Item>
+                  <Dropdown.Item as="button">Something else</Dropdown.Item>
+                </DropdownButton>
+              </Dropdown>
+            </div>
             <div className="navbar-buttons d-flex justify-content-end">
               <a href="basket.html" className="btn btn-primary navbar-btn">
                 <i className="fa fa-shopping-cart"></i>

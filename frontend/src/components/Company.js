@@ -21,9 +21,7 @@ const Company = () => {
             alt="about"
           ></img>
 
-          <div className="centered-about-company">
-            
-          </div>
+          <div className="centered-about-company"></div>
         </div>
 
         <div className="container-faq-company">
@@ -33,8 +31,7 @@ const Company = () => {
             alt="about"
           ></img>
 
-          <div className="centered-faq-company">
-          </div>
+          <div className="centered-faq-company"></div>
         </div>
       </div>
     </div>
