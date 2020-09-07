@@ -1,10 +1,14 @@
 import React from "react";
 import picAbout from "../images/about_us.jpg";
 import picFaq from "../images/faq.jpg";
+import productsimg from "../images/about_us_icon.png";
 
 const Company = () => {
   return (
     <div className="company-main">
+      <div className='img-product'>
+          <img src={productsimg} alt='About Us Icon' />
+        </div>
       <div className="heading-company">
         <h1 className="red-letters">COMPANY</h1>
       </div>

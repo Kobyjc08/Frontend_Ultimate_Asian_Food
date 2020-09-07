@@ -8,10 +8,13 @@ const About = () => {
   return (
     <Layout>
       <Container>
-        <img src={productsimg} className="header-icon" alt="About Us Icon" />
-        <h2 className="red-letters">About Us</h2>
-        <img src={aboutImage} alt="aboutImage" />
-        <div class="blockquote2">
+        <div className='img-product'>
+          <img src={productsimg} alt='About Us Icon' />
+        </div>
+
+        <h2 className='red-letters'>About Us</h2>
+        <img src={aboutImage} alt='aboutImage' />
+        <div className='blockquote2'>
           We are a professional e-shop for Asian food articles in Spain.
           Established in 2020, this idea was born beacuse the community of
           people from Pakistan, India and Bangladesh is growing steadily and
@@ -19,7 +22,7 @@ const About = () => {
           in the Spanish shops, in an e-shop. In addition, Spanish people will
           be interested in buying these products to cook this type of food.
         </div>
-        <div class="blockquote2">
+        <div className='blockquote2'>
           That is the reason why we want to have all the secrets flavors of
           India in one place, Welcome to Ultimate Asian Food!{" "}
         </div>
