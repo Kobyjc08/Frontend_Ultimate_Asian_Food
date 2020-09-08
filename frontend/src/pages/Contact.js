@@ -16,12 +16,12 @@ const Contact = () => {
           <img src={contactimg} alt="Contact Us Icon" />
         </div>
         <h2 className="red-letters">Contact Us</h2>
-        <iframe
+        <iframe title="Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1496.7257113413923!2d2.1812495913419974!3d41.38600187916257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2fdd0e1fc7b%3A0xb5044c6bb1c3dfd3!2sCarrer%20del%20Rec%2C%2027%2C%2008003%20Barcelona!5e0!3m2!1ses!2ses!4v1599586036100!5m2!1ses!2ses"
           width="1138"
           height="350"
           frameborder="0"
-          style="border:0;"
+          style={{border:0}}
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"

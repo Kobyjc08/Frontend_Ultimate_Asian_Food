@@ -76,7 +76,7 @@ export const Header = () => {
                   Contact
                 </Link>
               </li>
-            </ul>
+              </ul>
             {/* <div className="topnav">
               <input
                 className="nav-item"
@@ -84,17 +84,16 @@ export const Header = () => {
                 placeholder="Search.."
               ></input>
             </div> */}
-
-            <div className="navbar-buttons d-flex justify-content-end">
               <Dropdown>
-                <DropdownButton id="dropdown-item-button" title="Categories">
-                  <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText>
-                  <Dropdown.Item as="button">Action</Dropdown.Item>
-                  <Dropdown.Item as="button">Another action</Dropdown.Item>
-                  <Dropdown.Item as="button">Something else</Dropdown.Item>
+                <DropdownButton ClassName="nav-link" title="Categories">
+                  <Dropdown.Item as="button"><Link to="/categories/Desserts">Desserts</Link></Dropdown.Item>
+                  <Dropdown.Item as="button"><Link to="/categories/Traditional-Food">Asian Traditional foods</Link></Dropdown.Item>
+                  <Dropdown.Item as="button"><Link to="/categories/Spices">Spices</Link></Dropdown.Item>
+                  <Dropdown.Item as="button"><Link to="/categories/Lentils-Rice-Flour">Lentils/Rice/Flour</Link></Dropdown.Item>
                 </DropdownButton>
               </Dropdown>
-            </div>
+           
+            
             <div className="navbar-buttons d-flex justify-content-end">
               <a href="basket.html" className="btn btn-primary navbar-btn">
                 <i className="fa fa-shopping-cart"></i>

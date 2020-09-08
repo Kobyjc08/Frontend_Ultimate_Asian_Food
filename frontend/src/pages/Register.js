@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
-import { Container, Form, Button, Row, Col, Breadcrumb } from "react-bootstrap";
+import { Container, Form, Button,Col , Breadcrumb } from "react-bootstrap";
 
 const Register = () => {
   return (
@@ -11,6 +11,17 @@ const Register = () => {
           <Breadcrumb.Item active>RegisterPage</Breadcrumb.Item>
         </Breadcrumb>
         <Form>
+        <Form.Row>
+            <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="text" placeholder="First Name" />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId="formGridPassword">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="Text" placeholder="Last Name" />
+            </Form.Group>
+          </Form.Row>
           <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
@@ -25,12 +36,12 @@ const Register = () => {
 
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Address</Form.Label>
-            <Form.Control placeholder="1234 Main St" />
+            <Form.Control placeholder="Address" />
           </Form.Group>
 
           <Form.Group controlId="formGridAddress2">
             <Form.Label>DNI/NIE/PassPort</Form.Label>
-            <Form.Control placeholder="Apartment, studio, or floor" />
+            <Form.Control placeholder="DNI/NIE/PassPort" />
           </Form.Group>
 
           <Form.Row>
