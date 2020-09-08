@@ -89,7 +89,7 @@ export const Header = () => {
                   <Dropdown.Item as="button"><Link to="/categories/Desserts">Desserts</Link></Dropdown.Item>
                   <Dropdown.Item as="button"><Link to="/categories/Traditional-Food">Asian Traditional foods</Link></Dropdown.Item>
                   <Dropdown.Item as="button"><Link to="/categories/Spices">Spices</Link></Dropdown.Item>
-                  <Dropdown.Item as="button"><Link to="/Lentils/Rice/Flour">Lentils/Rice/Flour</Link></Dropdown.Item>
+                  <Dropdown.Item as="button"><Link to="/categories/Lentils-Rice-Flour">Lentils/Rice/Flour</Link></Dropdown.Item>
                 </DropdownButton>
               </Dropdown>
            
