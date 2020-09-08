@@ -3,7 +3,6 @@ import { Row } from 'react-bootstrap'
 
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-import productsimg from "../images/productsimg.png";
 import { getImages } from "../images/products/products";
 
 
@@ -13,21 +12,18 @@ const favoriteProducts = ({data}) => {
   }
   return (
     <div>
-      <div className='img-product'>
-        <img src={productsimg} alt='product'></img>
-      </div>
-      <h2 className='red-letters'>PRODUCTS</h2>
+      
       <Row id='favorite-products-cards' className='cards'>
         {data.map((product, index) => {
           return (
             <CardDeck key={index}>
-              <Card>
+              <Card className="card-render">
                 <Card.Img
                   variant='top'
                   src={getImages(product.product_pic)}
                   className='card-image'
                 />
-                <Card.Body>
+                <Card.Body className="car-body-render">
                   <Card.Title>
                     <a
                       href={product.url}

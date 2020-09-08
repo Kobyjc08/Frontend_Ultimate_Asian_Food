@@ -69,14 +69,29 @@ code {
 }
 
 .card-image {
-  width: 10rem;
-  height: 18rem;
+  width: 100%;
+  height: 70%;
+}
+.card-render {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgb(230, 216, 139);
+  width: max-content;
 }
 .card-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+}
+
+.car-body-render {
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  justify-content: center;
+  
 }
 
 .red-letters {

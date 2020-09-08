@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
-import { Container, Form, Button, Row, Col, Breadcrumb } from "react-bootstrap";
+import { Container, Form, Button,Col , Breadcrumb } from "react-bootstrap";
 
 const Register = () => {
   return (

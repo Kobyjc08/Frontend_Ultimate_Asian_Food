@@ -18,6 +18,10 @@ const ProductDetailed = () => {
   return (
     <Layout>
       <Container>
+      <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>Detailed Product</Breadcrumb.Item>
+        </Breadcrumb>
         <h1>Product Detailed Component</h1>
         <FavoriteProducts data={favoriteProducts} />
         <Company />
