@@ -73,7 +73,7 @@ h1 {
   padding-left: 0 !important;
 }
 
-#header-icon {
+.header-icon {
   text-align: center;
 }
 
@@ -558,6 +558,18 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
+}
+
+/*
+*
+* ======================================================================
+* BREADCRUMBS
+* ======================================================================
+*
+*/
+#breadcrumb_links_vertical {
+  vertical-align: bottom;
+  line-height: 30px;
 }
 
 /*
