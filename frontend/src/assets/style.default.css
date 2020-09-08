@@ -2304,17 +2304,21 @@ mark,
 }
 
 .text-primary {
-  color: #4fbfa8 !important;
+  color: #8d1a20 !important;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #3aa18c !important;
+  color: #8d1a20 !important;
 }
 
 .text-uppercase {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.new-titles {
+  color: #8d1a20 !important;
 }
 
 /*
