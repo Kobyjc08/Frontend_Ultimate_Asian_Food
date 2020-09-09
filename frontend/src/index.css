@@ -30,17 +30,11 @@ code {
   position: relative;
   text-align: center;
   color: black;
-  background-color: whitesmoke;
 }
 
-.centered-about-company {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .img-container-about-company {
   width: 100%;
+  padding-right: 20px;
 }
 
 .container-faq-company {
@@ -49,14 +43,9 @@ code {
   color: black;
 }
 
-.centered-faq-company {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .img-container-faq-company {
   width: 100%;
+  padding-left: 20px;
 }
 /* ehsan-Company-component-end*/
 
@@ -91,7 +80,6 @@ code {
   width: max-content;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .red-letters {
