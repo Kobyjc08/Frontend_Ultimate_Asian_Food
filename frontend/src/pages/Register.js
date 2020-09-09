@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
-import { Container, Form, Button,Col , Breadcrumb } from "react-bootstrap";
+import { Container, Form, Button, Col, Breadcrumb } from "react-bootstrap";
 
 const Register = () => {
   return (
@@ -8,10 +8,12 @@ const Register = () => {
       <Container>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>RegisterPage</Breadcrumb.Item>
+          <Breadcrumb.Item id="breadcrumb_links_vertical" active>
+            RegisterPage
+          </Breadcrumb.Item>
         </Breadcrumb>
         <Form>
-        <Form.Row>
+          <Form.Row>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>First Name</Form.Label>
               <Form.Control type="text" placeholder="First Name" />

@@ -6,26 +6,30 @@ import Company from "../components/Company.js";
 import FavoriteProducts from "../components/FavoriteProducts";
 
 const Species = () => {
-
   const [SpicesCategorie, setSpicesCategorie] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/productsByCategory/Spices").then(function (response) {
-      setSpicesCategorie(response.data);
-      console.group(response.data);
-    });
+    axios
+      .get("http://localhost:3001/productsByCategory/Spices")
+      .then(function (response) {
+        setSpicesCategorie(response.data);
+        console.group(response.data);
+      });
   }, []);
 
   return (
     <Layout>
       <Container>
-      <Breadcrumb>
+        <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>Spices</Breadcrumb.Item>
+          <Breadcrumb.Item id="breadcrumb_links_vertical" active>
+            Spices
+          </Breadcrumb.Item>
         </Breadcrumb>
         <h3 className="red-letters">
-        - The best aromas and flavors can be found in our spices! -</h3>
-        <FavoriteProducts data={SpicesCategorie}/>
+          - The best aromas and flavors can be found in our spices! -
+        </h3>
+        <FavoriteProducts data={SpicesCategorie} />
         <Company />
       </Container>
     </Layout>

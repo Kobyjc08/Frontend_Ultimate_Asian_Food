@@ -11,7 +11,9 @@ const FAQ = () => {
       <Container>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>FAQ's</Breadcrumb.Item>
+          <Breadcrumb.Item id="breadcrumb_links_vertical" active>
+            FAQ's
+          </Breadcrumb.Item>
         </Breadcrumb>
         <div className="img-product">
           <img src={faqimg} alt="FAQ Icon" />
