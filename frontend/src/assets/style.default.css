@@ -2169,7 +2169,7 @@ body {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #353d46;
   background-color: #faf28e;
 }
 
@@ -3297,3 +3297,8 @@ code {
 /*
  * 11. ICONS
  */
+
+#breadcrumb_links_vertical {
+  vertical-align: bottom;
+  line-height: 45px;
+}

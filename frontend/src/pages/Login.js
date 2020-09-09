@@ -8,7 +8,9 @@ const Login = () => {
       <Container>
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>LoginPage</Breadcrumb.Item>
+          <Breadcrumb.Item id="breadcrumb_links_vertical" active>
+            LoginPage
+          </Breadcrumb.Item>
         </Breadcrumb>
         <Form>
           <Form.Group controlId="formBasicEmail">
