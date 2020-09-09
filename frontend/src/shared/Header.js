@@ -76,7 +76,7 @@ export const Header = () => {
                   Contact
                 </Link>
               </li>
-              </ul>
+            </ul>
             {/* <div className="topnav">
               <input
                 className="nav-item"
@@ -84,16 +84,28 @@ export const Header = () => {
                 placeholder="Search.."
               ></input>
             </div> */}
-              <Dropdown>
-                <DropdownButton ClassName="nav-link" title="Categories">
-                  <Dropdown.Item as="button"><Link to="/categories/Desserts">Desserts</Link></Dropdown.Item>
-                  <Dropdown.Item as="button"><Link to="/categories/Traditional-Food">Asian Traditional foods</Link></Dropdown.Item>
-                  <Dropdown.Item as="button"><Link to="/categories/Spices">Spices</Link></Dropdown.Item>
-                  <Dropdown.Item as="button"><Link to="/categories/Lentils-Rice-Flour">Lentils/Rice/Flour</Link></Dropdown.Item>
-                </DropdownButton>
-              </Dropdown>
-           
-            
+            <Dropdown>
+              <DropdownButton ClassName="nav-link" title="Categories">
+                <Dropdown.ItemText>Items by Categories</Dropdown.ItemText>
+                <Dropdown.Item as="button">
+                  <Link to="/categories/Desserts">Desserts</Link>
+                </Dropdown.Item>
+                <Dropdown.Item as="button">
+                  <Link to="/categories/Traditional-Food">
+                    Asian Traditional foods
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item as="button">
+                  <Link to="/categories/Spices">Spices</Link>
+                </Dropdown.Item>
+                <Dropdown.Item as="button">
+                  <Link to="/categories/Lentils-Rice-Flour">
+                    Lentils/Rice/Flour
+                  </Link>
+                </Dropdown.Item>
+              </DropdownButton>
+            </Dropdown>
+
             <div className="navbar-buttons d-flex justify-content-end">
               <a href="basket.html" className="btn btn-primary navbar-btn">
                 <i className="fa fa-shopping-cart"></i>
