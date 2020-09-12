@@ -42,7 +42,7 @@ export const Footer = () => {
                 <i className="fab fa-cc-amex"></i>
               </a>
             </p>
-            <p className="social_special">
+            <p className="social_special col-md-12 col-sm-12 col-xs-12">
               Copyright © The Ultimate Asian Food Eshop
             </p>
           </div>
