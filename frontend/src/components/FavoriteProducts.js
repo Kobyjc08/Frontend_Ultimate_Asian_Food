@@ -1,6 +1,6 @@
 import React from "react";
-import { Row } from 'react-bootstrap'
-
+import { Row } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import { getImages } from "../images/products/products";
@@ -25,12 +25,12 @@ const favoriteProducts = ({data}) => {
                 />
                 <Card.Body className="car-body-render">
                   <Card.Title>
-                    <a
-                      href={product.url}
+                    <Link
+                      to="/DetailedProduct"
                       target='_'
                       className='btn btn-primary'>
                       {product.product_name}
-                    </a>
+                    </Link>
                   </Card.Title>
                   <Card.Text className='card-info'>
                     €{product.unit_price}

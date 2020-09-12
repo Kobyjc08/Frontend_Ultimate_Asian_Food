@@ -103,6 +103,69 @@ code {
   margin: 10rem;
 }
 
+.Cart-pic {
+  display: flex;
+  height: 7rem;
+  width: 7rem;
+}
+
+.cart-price{
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.function-buttons-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cart-main {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+.subtotal-cart-list{
+  display: flex;
+  justify-content: flex-end;
+}
+.cart-action{
+  background-color: lightgrey;
+  margin-left: 1rem;
+  width: 30%;
+  padding: 1rem;
+}
+.checkout-button{
+  width: 100%;
+}
+.title-price{
+  display: flex;
+  justify-content: flex-end;
+}
+/*Product detailed css Jorge*/
+.main-detailed-product{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.image-product-detail{
+  display: flex;
+  background-color: #8d1a20;
+  width: 50%;
+  justify-content: center;
+  margin-right: 1rem;
+}
+.info-product-detailed{
+display:flex;
+flex-direction: column;
+background-color: white;
+width: 50%;
+}
+.price-detailed-product {
+  display:flex;
+  align-items: center;
+}
 /* Jorge Css - end */
 
 /* Ehsan search */
