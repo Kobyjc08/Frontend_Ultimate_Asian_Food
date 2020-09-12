@@ -1,7 +1,9 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
 import { Container, Breadcrumb } from "react-bootstrap";
-import productsimg from "../images/productsimg.png";
+import addressimg from "../images/address_icon.png";
+import phoneimg from "../images/phone_icon.png";
+import socialimg from "../images/social_hub_icon.png";
 import contactimg from "../images/contact_us_icon.png";
 
 const Contact = () => {
@@ -29,28 +31,30 @@ const Contact = () => {
           aria-hidden="false"
           tabindex="0"
         ></iframe>
-        <ul class="list-unstyled">
-          <li class="media">
-            <img src={productsimg} class="mr-3" alt="IndianIcon" />
+        <ul class="list-unstyled row blockquote2">
+          <li class="media col-md-4 col-sm-4 col-xs-12">
+            <img src={addressimg} class="mr-3" alt="Address Icon" />
             <div class="media-body">
-              <h5 class="mt-0 mb-1">Localization</h5>
-              <div>Carrer Puig i Fabra 456, Barcelona. Spain.</div>
+              <h4 class="mt-0 mb-1 new-titles">Address</h4>
+              <div>Carrer Del Xef Triomfadors 777</div>
+              <div>Barcelona, Spain</div>
               Mon - Fri 8:00 to 16:00
             </div>
           </li>
 
-          <li class="media my-4">
-            <img src={productsimg} class="mr-3" alt="IndianIcon" />
+          <li class="media col-md-4 col-sm-4 col-xs-12">
+            <img src={phoneimg} class="mr-3" alt="Phone Icon" />
             <div class="media-body">
-              <h5 class="mt-0 mb-1">Call Us!</h5>
-              +34 933 596 485
+              <h4 class="mt-0 mb-1 new-titles">Telephones</h4>
+              +34 607 596 485 | +34 933 596 485
             </div>
           </li>
-          <li class="media">
-            <img src={productsimg} class="mr-3" alt="IndianIcon" />
+
+          <li class="media col-md-4 col-sm-4 col-xs-12">
+            <img src={socialimg} class="mr-3" alt="Social Icon" />
             <div class="media-body">
-              <h5 class="mt-0 mb-1">Social Hub</h5>
-              <div>Facebook: @Ultimate.Asian.Food</div>
+              <h4 class="mt-0 mb-1 new-titles">Social Hub</h4>
+              <div>Facebook: /ultimateasianfood</div>
               Instagram: @Ultimate.Asian.Food
             </div>
           </li>
