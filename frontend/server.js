@@ -55,7 +55,7 @@ app.get("/productsByID/:productid", function (req, res) {
   const productId = req.params.productid;
   console.log(req.params.productid);
   pool
-    .query("select * from products  where id=$1", [productId])
+    .query("select * from products p inner join  categories c on p.category_id=c.id where p.id=$1", [productId])
     .then((result) => res.json(result.rows[0]))
     .catch((e) => console.error(e));
 });

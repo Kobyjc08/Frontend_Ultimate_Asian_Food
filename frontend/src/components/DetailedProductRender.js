@@ -1,12 +1,10 @@
 import React from "react";
-import { ul, li, Container, Col, Image } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Button, Container, Col, Image } from 'react-bootstrap';
 import { getImages } from "../images/products/products";
 
 
 
 const RenderProduct = ({data}) => {
-    console.log(data)
   if (data.length < 1) {
     return <p>Loading...</p>
   }
@@ -19,18 +17,22 @@ const RenderProduct = ({data}) => {
          </Col>
          </div>
          <div className="info-product-detailed">
-                <h4>{data.product_name}</h4>
-                <div>
+                <h3 className="name-detailed-product">{data.product_name}</h3>
+                <div className="description-detailed-product">
                 <div>Description: </div>
-                <div>{data.description}</div>
+                <div className="description-detailed-p">{data.description}</div>
+                </div>
+                <div className="description-detailed-product">
+                <div>Categorie   : </div>
+                <div className="description-detailed-p">{data.name}</div>
                 </div>
                 <div className="price-detailed-product">
-                <div>Price</div>
+                <div>Price      :</div>
                 <h4 className="cart-price">€{data.unit_price}</h4>
                 </div>
-                <div>Qty:
+                <div className="qty-detailed-product">
                     <select>
-                        <option value="1">1</option>
+                        <option value="1">Qty: 1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -40,6 +42,12 @@ const RenderProduct = ({data}) => {
                         <option value="8">8</option>
                         </select>
                 </div>
+                <div className="add-cart-button">
+                <Button variant="primary" type="submit">
+                <i className="fa fa-shopping-cart"></i>
+            Add to Cart
+          </Button>
+            </div>
                 <p className="social">
               <a href="#" className="facebook external">
                 <i className="fab fa-facebook"></i>
@@ -57,7 +65,7 @@ const RenderProduct = ({data}) => {
                 <i className="fa fa-envelope"></i>
               </a>
             </p>
-                <Link  to="#">Add to Cart</Link >
+            
                 <p className="social text-lg-right">
               <a href="#" className="Mastercard Credit Card">
                 <i className="fab fa-cc-mastercard"></i>

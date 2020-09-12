@@ -102,7 +102,7 @@ code {
   padding: 10rem;
   margin: 10rem;
 }
-
+/* Shopping Cart css Jorge */
 .Cart-pic {
   display: flex;
   height: 7rem;
@@ -112,7 +112,7 @@ code {
 .cart-price{
   align-items: flex-start;
   justify-content: center;
-  margin-left: 2rem;
+  margin-left: 2.7rem;
 }
 .function-buttons-cart {
   display: flex;
@@ -164,7 +164,37 @@ width: 50%;
 }
 .price-detailed-product {
   display:flex;
+  flex-direction: row;
   align-items: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.description-detailed-product {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+.name-detailed-product{
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.qty-detailed-product{
+  margin-left: 1rem;
+  size: 10rem;
+  margin-top: 1rem;
+}
+.description-detailed-p{
+  text-justify: auto;
+  margin-left: 1rem;
+}
+.add-cart-button{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 /* Jorge Css - end */
 
