@@ -3,8 +3,9 @@ import { Container, Breadcrumb } from "react-bootstrap";
 import axios from "axios";
 import { Layout } from "../layout/Layout";
 import Company from "../components/Company.js";
-
-import DetailedProductRender from '../components/DetailedProductRender'
+import productsimg from "../images/productsimg.png";
+import FavoriteProducts from "../components/FavoriteProducts.js";
+import DetailedProductRender from '../components/DetailedProductRender';
 
 const DetailedProduct = () => {
 
@@ -17,6 +18,15 @@ const DetailedProduct = () => {
     });
   }, []);
 
+  const [favoriteProducts, setFavoriteProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/favorites").then(function (response) {
+      setFavoriteProducts(response.data);
+      console.group(response.data);
+    });
+  }, []);
+
   return (
     <Layout>
       <Container>
@@ -25,6 +35,11 @@ const DetailedProduct = () => {
           <Breadcrumb.Item active>ShoopingCart</Breadcrumb.Item>
         </Breadcrumb>
         <DetailedProductRender data={product}/>
+        <div className="img-product">
+          <img src={productsimg} alt="product"></img>
+        </div>
+        <h2 className="red-letters">PRODUCTS</h2>
+        <FavoriteProducts data={favoriteProducts}/>
         <Company />
       </Container>
     </Layout>
