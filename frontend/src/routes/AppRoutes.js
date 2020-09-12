@@ -14,7 +14,9 @@ import Login from '../pages/Login';
 import Desserts from '../pages/Desserts';
 import AsianTraditionalFood from '../pages/Asian-Traditional-Food';
 import Spices from '../pages/Spices';
-import Lentils from '../pages/lentils-rices-flours'
+import Lentils from '../pages/lentils-rices-flours';
+import ShoppingCart from '../pages/ShoppingCart';
+import DetailedProduct from '../pages/DetailedProductPage'
 
 export const AppRouter = () => {
   return (
@@ -31,6 +33,8 @@ export const AppRouter = () => {
           <Route exact path="/categories/Traditional-Food" component={AsianTraditionalFood}/> 
           <Route exact path="/categories/Spices" component={Spices}/> 
           <Route exact path="/categories/Lentils-Rice-Flour" component={Lentils}/>
+          <Route exact path="/ShoppingCart" component={ShoppingCart}/>
+          <Route exact path="/DetailedProduct" component={DetailedProduct}/>
           
         </Switch>
     </Router>
