@@ -14,7 +14,6 @@ const DetailedProduct = () => {
   useEffect(() => {
     axios.get("http://localhost:3001/productsByID/6").then(function (response) {
       setProduct(response.data);
-      console.group(response.data);
     });
   }, []);
 
@@ -23,7 +22,6 @@ const DetailedProduct = () => {
   useEffect(() => {
     axios.get("http://localhost:3001/favorites").then(function (response) {
       setFavoriteProducts(response.data);
-      console.group(response.data);
     });
   }, []);
 

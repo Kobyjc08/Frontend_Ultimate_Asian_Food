@@ -10,6 +10,7 @@ const favoriteProducts = ({data}) => {
   if (data.length < 1) {
     return <p>Loading...</p>
   }
+  console.log(data)
   return (
     <div>
       
@@ -26,8 +27,7 @@ const favoriteProducts = ({data}) => {
                 <Card.Body className="car-body-render">
                   <Card.Title>
                     <Link
-                      to="/DetailedProduct"
-                      target='_'
+                      to={`/DetailedProduct/${product.id}`}
                       className='btn btn-primary'>
                       {product.product_name}
                     </Link>

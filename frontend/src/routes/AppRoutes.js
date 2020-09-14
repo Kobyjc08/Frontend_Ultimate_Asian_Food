@@ -34,7 +34,7 @@ export const AppRouter = () => {
           <Route exact path="/categories/Spices" component={Spices}/> 
           <Route exact path="/categories/Lentils-Rice-Flour" component={Lentils}/>
           <Route exact path="/ShoppingCart" component={ShoppingCart}/>
-          <Route exact path="/DetailedProduct" component={DetailedProduct}/>
+          <Route exact path="/DetailedProduct/:id" component={DetailedProduct}/>
           
         </Switch>
     </Router>
