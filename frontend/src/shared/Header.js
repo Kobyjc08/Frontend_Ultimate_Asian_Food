@@ -85,7 +85,7 @@ export const Header = () => {
               ></input>
             </div> */}
             <Dropdown>
-              <DropdownButton ClassName="nav-link" title="Categories">
+              <DropdownButton className="nav-link" title="Categories">
                 <Dropdown.ItemText>Items by Categories</Dropdown.ItemText>
                 <Dropdown.Item as="button">
                   <Link to="/categories/Desserts">Desserts</Link>
@@ -107,10 +107,10 @@ export const Header = () => {
             </Dropdown>
 
             <div className="navbar-buttons d-flex justify-content-end">
-              <a href="basket.html" className="btn btn-primary navbar-btn">
+              <Link to="/ShoppingCart" href="basket.html" className="btn btn-primary navbar-btn">
                 <i className="fa fa-shopping-cart"></i>
                 <span>0 items in cart</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

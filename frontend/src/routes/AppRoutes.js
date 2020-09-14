@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
+
   Route,
   Redirect,
 } from "react-router-dom";
@@ -17,6 +18,7 @@ import AsianTraditionalFood from "../pages/Asian-Traditional-Food";
 import Spices from "../pages/Spices";
 import Lentils from "../pages/lentils-rices-flours";
 import Dashboard from "../pages/Dashboard";
+
 
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
@@ -45,12 +47,19 @@ export const AppRouter = () => {
   };
   return (
     <Router>
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/product-detail" component={ProductDetailed} />
         <Route exact path="/About" component={About} />
         <Route exact path="/FAQ" component={FAQ} />
         <Route exact path="/Contact" component={Contact} />
+         <Route exact path="/categories/Desserts" component={Desserts}/> 
+         <Route exact path="/categories/Traditional-Food" component={AsianTraditionalFood}/> 
+         <Route exact path="/categories/Spices" component={Spices}/> 
+         <Route exact path="/categories/Lentils-Rice-Flour" component={Lentils}/>
+         <Route exact path="/ShoppingCart" component={ShoppingCart}/>
+         <Route exact path="/DetailedProduct/:id" component={DetailedProduct}/>
         <Route
           exact
           path="/register"
@@ -84,19 +93,9 @@ export const AppRouter = () => {
             )
           }
         />
-        <Route exact path="/categories/Desserts" component={Desserts} />
-        <Route
-          exact
-          path="/categories/Traditional-Food"
-          component={AsianTraditionalFood}
-        />
-        <Route exact path="/categories/Spices" component={Spices} />
-        <Route
-          exact
-          path="/categories/Lentils-Rice-Flour"
-          component={Lentils}
-        />
+       
       </Switch>
+
     </Router>
   );
 };
