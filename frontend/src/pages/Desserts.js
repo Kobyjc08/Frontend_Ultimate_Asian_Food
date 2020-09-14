@@ -10,7 +10,7 @@ const Desserts = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/productsByCategory/Desserts")
+      .get("http://localhost:5000/productsByCategory/Desserts")
       .then(function (response) {
         setdessertsCategories(response.data);
         console.group(response.data);
