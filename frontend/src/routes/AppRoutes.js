@@ -18,6 +18,9 @@ import AsianTraditionalFood from "../pages/Asian-Traditional-Food";
 import Spices from "../pages/Spices";
 import Lentils from "../pages/lentils-rices-flours";
 import Dashboard from "../pages/Dashboard";
+import ShoppingCart from '../pages/ShoppingCart';
+import DetailedProduct from '../pages/DetailedProductPage';
+
 
 
 export const AppRouter = () => {
