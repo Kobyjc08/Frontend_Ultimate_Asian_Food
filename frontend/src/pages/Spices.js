@@ -10,7 +10,7 @@ const Species = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/productsByCategory/Spices")
+      .get("http://localhost:5000/productsByCategory/Spices")
       .then(function (response) {
         setSpicesCategorie(response.data);
         console.group(response.data);

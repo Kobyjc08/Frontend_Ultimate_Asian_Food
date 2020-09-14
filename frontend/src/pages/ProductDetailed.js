@@ -9,7 +9,7 @@ const ProductDetailed = () => {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/favorites").then(function (response) {
+    axios.get("http://localhost:5000/favorites").then(function (response) {
       setFavoriteProducts(response.data);
       console.group(response.data);
     });
