@@ -85,7 +85,7 @@ export const Header = () => {
               ></input>
             </div> */}
             <Dropdown>
-              <DropdownButton ClassName="nav-link" title="Categories">
+              <DropdownButton className="nav-link" title="Categories">
                 <Dropdown.ItemText>Items by Categories</Dropdown.ItemText>
                 <Dropdown.Item as="button">
                   <Link to="/categories/Desserts">Desserts</Link>
