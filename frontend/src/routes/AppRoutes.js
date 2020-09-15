@@ -31,7 +31,7 @@ export const AppRouter = () => {
         headers: { jwt_token: localStorage.token },
       });
 
-      const parseRes = await res.json();
+    const parseRes = await res.json();
 
       parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
     } catch (err) {

@@ -10,7 +10,7 @@ const AsianTraditionalFood = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/productsByCategory/Asian")
+      .get("http://localhost:3001/productsByCategory/Asian")
       .then(function (response) {
         setAsianTraditionalFood(response.data);
         console.group(response.data);

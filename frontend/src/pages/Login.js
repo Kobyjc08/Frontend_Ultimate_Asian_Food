@@ -75,7 +75,7 @@ const Login = ({ setAuth }) => {
               onChange={(e) => onChange(e)}
               className="form-control my-3"
             />
-            <button class="btn btn-success btn-block">Submit</button>
+            <button className="btn btn-success btn-block">Submit</button>
           </Form>
 
           <Link to="/register"> Register Here</Link>
