@@ -18,12 +18,12 @@ app.use(cors());
 
 // Already using
 //GET ALL PRODUCT BY CATEGORIES ---DONE EHSAN
-app.get("/productsByCategory/:categoriesName", function (req, res) {
-  const product = req.params.categoriesName;
+app.get("/Category/:category_id", function (req, res) {
+  const id = req.params.category_id;
   pool
     .query(
-      "select * from products join categories on products.category_id = categories.id where categories.name like $1",
-      [`%${product}%`]
+      "select p.id, p.product_name, p.description, p.unit_price , p.product_pic , c."name" ,p.category_id from products p join categories c on p.category_id = c.id where c.id=1",
+      [id]
     )
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
@@ -290,6 +290,6 @@ app.put("/product/:productId", function (req, res) {
     });
 });
 
-app.listen(3001, function () {
+app.listen(port, function () {
   console.log("Server is listening on port 3001. Ready to accept requests!");
 });
