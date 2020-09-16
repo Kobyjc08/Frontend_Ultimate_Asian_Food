@@ -1,7 +1,7 @@
 import { Layout } from "../layout/Layout";
-import { Container, Button, Form, Breadcrumb } from "react-bootstrap";
+import { Container, Form, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 // import { toast } from "react-toastify";
 
@@ -75,7 +75,7 @@ const Login = ({ setAuth }) => {
               onChange={(e) => onChange(e)}
               className="form-control my-3"
             />
-            <button class="btn btn-success btn-block">Submit</button>
+            <button className="btn btn-success btn-block">Submit</button>
           </Form>
 
           <Link to="/register"> Register Here</Link>

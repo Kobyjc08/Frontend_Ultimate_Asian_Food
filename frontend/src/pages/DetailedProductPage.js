@@ -12,7 +12,7 @@ const DetailedProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/productsByID/6").then(function (response) {
+    axios.get("http://localhost:5000/productsByID/6").then(function (response) {
       setProduct(response.data);
     });
   }, []);
@@ -20,7 +20,7 @@ const DetailedProduct = () => {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/favorites").then(function (response) {
+    axios.get("http://localhost:5000/favorites").then(function (response) {
       setFavoriteProducts(response.data);
     });
   }, []);

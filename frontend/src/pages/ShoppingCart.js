@@ -11,7 +11,7 @@ const ShoppingCart = () => {
   const [Cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/productsByCategory/Desserts").then(function (response) {
+    axios.get("http://localhost:5000/productsByCategory/Desserts").then(function (response) {
       setCart(response.data);
       console.group(response.data);
     });

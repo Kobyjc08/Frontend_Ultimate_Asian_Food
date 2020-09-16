@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = 5000;
 const { Pool } = require("pg");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -18,12 +18,12 @@ app.use(cors());
 
 // Already using
 //GET ALL PRODUCT BY CATEGORIES ---DONE EHSAN
-app.get("/productsByCategory/:categoriesName", function (req, res) {
-  const product = req.params.categoriesName;
+app.get("/Category/:category_id", function (req, res) {
+  const id = req.params.category_id;
   pool
     .query(
-      "select * from products join categories on products.category_id = categories.id where categories.name like $1",
-      [`%${product}%`]
+      "select p.id, p.product_name, p.description, p.unit_price , p.product_pic , c.'name' ,p.category_id from products p join categories c on p.category_id = c.id where c.id=1",
+      [id]
     )
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
@@ -290,6 +290,18 @@ app.put("/product/:productId", function (req, res) {
     });
 });
 
-app.listen(3001, function () {
-  console.log("Server is listening on port 3001. Ready to accept requests!");
+// dashboard display orders
+app.get("/orderItems/:customerId", function (req, res) {
+  const customerId = req.params.customerId;
+  pool
+    .query(
+      "select o.order_reference, p.product_name, p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users c on o.customer_id=users.user_id where users.user_id=$1",
+      [customerId]
+    )
+    .then((result) => res.json(result.rows))
+    .catch((e) => console.error(e));
+});
+
+app.listen(port, function () {
+  console.log("Server is listening on port 5000. Ready to accept requests!");
 });

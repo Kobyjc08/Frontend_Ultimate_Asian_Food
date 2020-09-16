@@ -10,7 +10,6 @@ const favoriteProducts = ({data}) => {
   if (data.length < 1) {
     return <p>Loading...</p>
   }
-  console.log(data)
   return (
     <div>
       
