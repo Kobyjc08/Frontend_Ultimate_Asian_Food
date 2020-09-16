@@ -22,7 +22,7 @@ app.get("/Category/:category_id", function (req, res) {
   const id = req.params.category_id;
   pool
     .query(
-      "select p.id, p.product_name, p.description, p.unit_price , p.product_pic , c."name" ,p.category_id from products p join categories c on p.category_id = c.id where c.id=1",
+      "select p.id, p.product_name, p.description, p.unit_price , p.product_pic , c.'name' ,p.category_id from products p join categories c on p.category_id = c.id where c.id=1",
       [id]
     )
     .then((result) => res.json(result.rows))
@@ -288,6 +288,18 @@ app.put("/product/:productId", function (req, res) {
       console.log(error);
       res.status(500).send("something went wrong!!");
     });
+});
+
+// dashboard display orders
+app.get("/orderItems/:customerId", function (req, res) {
+  const customerId = req.params.customerId;
+  pool
+    .query(
+      "select o.order_reference, p.product_name, p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users c on o.customer_id=users.user_id where users.user_id=$1",
+      [customerId]
+    )
+    .then((result) => res.json(result.rows))
+    .catch((e) => console.error(e));
 });
 
 app.listen(port, function () {

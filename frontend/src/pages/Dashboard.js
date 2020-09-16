@@ -9,7 +9,7 @@ const Dashboard = ({ setAuth }) => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:5000/dashboard/", {
+      const res = await fetch("http://localhost:3001/dashboard/", {
         method: "POST",
         headers: { jwt_token: localStorage.token },
       });
