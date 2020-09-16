@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,7 +26,7 @@ import DetailedProduct from '../pages/DetailedProductPage';
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("http://localhost:3001/authentication/verify", {
+      const res = await fetch("http://localhost:5000/authentication/verify", {
         method: "POST",
         headers: { jwt_token: localStorage.token },
       });

@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
 import { Container, Breadcrumb } from "react-bootstrap";
-import productsimg from "../images/productsimg.png";
 import faqImage from "../images/faq_main_xl.jpg";
 import faqimg from "../images/faq_icon.png";
 

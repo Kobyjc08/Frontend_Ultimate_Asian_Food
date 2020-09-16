@@ -23,7 +23,7 @@ app.get("/productsByCategory/:category_Name", function (req, res) {
   const category_Name = req.params.category_Name;
   pool
     .query(
-      `select p.id, p.product_name, p.description, p.unit_price , p.product_pic ,p.category_id from products p join categories c on p.category_id = c.id like $1`,
+      `select p.id, p.product_name, p.description, p.unit_price , p.product_pic , c."name" ,p.category_id from products p join categories c on p.category_id = c.id where c.name like $1`,
       [`%${category_Name}%`]
     )
     .then((result) => res.json(result.rows))

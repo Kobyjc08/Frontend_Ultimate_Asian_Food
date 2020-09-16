@@ -15,12 +15,12 @@ const Cart = ({data}) => {
         <h4 className="title-price">Price</h4>
         {data.map ((product, index) => {
             return (
-    <div>
-        <ul class="list-unstyled">
-          <li class="media" key={index}>
+    <div key={index}>
+        <ul className="list-unstyled">
+          <li className="media">
             <img src={getImages(product.product_pic)} className="mr-3 Cart-pic" alt="CartProducts"/>
-            <div class="media-body">
-                <h4 class="mt-0 mb-1">{product.product_name}</h4>
+            <div className="media-body">
+                <h4 className="mt-0 mb-1">{product.product_name}</h4>
                 <div className="description-cart">{product.description}</div>
               <div className="function-buttons-cart">
                 <Link  to="#">Delete</Link >

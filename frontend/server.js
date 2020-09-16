@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3001;
+const port = 5000;
 const { Pool } = require("pg");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -303,5 +303,5 @@ app.get("/orderItems/:customerId", function (req, res) {
 });
 
 app.listen(port, function () {
-  console.log("Server is listening on port 3001. Ready to accept requests!");
+  console.log("Server is listening on port 5000. Ready to accept requests!");
 });

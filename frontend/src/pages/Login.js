@@ -1,7 +1,7 @@
 import { Layout } from "../layout/Layout";
-import { Container, Button, Form, Breadcrumb } from "react-bootstrap";
+import { Container, Form, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 // import { toast } from "react-toastify";
 
@@ -21,7 +21,7 @@ const Login = ({ setAuth }) => {
     try {
       const body = { email, password };
       const response = await fetch(
-        "http://localhost:3001/authentication/login",
+        "http://localhost:5000/authentication/login",
         {
           method: "POST",
           headers: {
