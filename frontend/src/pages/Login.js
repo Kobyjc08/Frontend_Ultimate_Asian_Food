@@ -1,7 +1,7 @@
 import { Layout } from "../layout/Layout";
 import { Container, Form, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import { toast } from "react-toastify";
 
@@ -56,7 +56,7 @@ const Login = ({ setAuth }) => {
           </Breadcrumb.Item>
         </Breadcrumb>
         <Fragment>
-          <h1 className="mt-5 text-center">Login</h1>
+          <h1 className="red-letters mt-5 text-center">Login</h1>
 
           <Form onSubmit={onSubmitForm}>
             <input

@@ -18,7 +18,11 @@ const FAQ = () => {
           <img src={faqimg} alt="FAQ Icon" />
         </div>
         <h2 className="red-letters">Frequently Asked Questions</h2>
-        <img src={faqImage} alt="aboutImage" />
+        <img
+          src={faqImage}
+          className="col-md-12 col-xs-12 col-sm-12 big-banner"
+          alt="aboutImage"
+        />
         <ul class="list-unstyled blockquote2">
           <li class="media">
             <img src={faqimg} class="mr-3" alt="FAQ Icon" />
