@@ -492,7 +492,6 @@ h1 {
   width: 30px;
   height: 30px;
   border-radius: 15px;
-  line-height: 26px;
   font-size: 15px;
   text-align: center;
   -webkit-transition: all 0.3s;
@@ -502,13 +501,13 @@ h1 {
 
 #copyright .social a i {
   vertical-align: bottom;
-  line-height: 30px;
+  line-height: 20px;
 }
 
 #copyright .social_special {
   text-align: right;
   vertical-align: bottom;
-  line-height: 30px;
+  line-height: px;
 }
 
 /*
@@ -1346,6 +1345,7 @@ STYLE SWITCHER FOR DEMO
 .navbar-brand {
   display: inline-block;
   padding-top: 0;
+  padding-bottom: 0;
   margin-right: 1rem;
   font-size: 1.125rem;
 }
@@ -1528,16 +1528,16 @@ STYLE SWITCHER FOR DEMO
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #212529;
-  background-color: #4fbfa8;
-  border-color: #4fbfa8;
+  background-color: #e4dc7c;
+  border-color: #e4dc7c;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #3aa18c;
-  border-color: #379783;
+  background-color: #e4dc7c;
+  border-color: #e4dc7c;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -1589,14 +1589,14 @@ STYLE SWITCHER FOR DEMO
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #8d1a20;
+  border-color: #8d1a20;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #218838;
-  border-color: #1e7e34;
+  background-color: #58050a;
+  border-color: #58050a;
 }
 
 .btn-success:focus,
@@ -2177,7 +2177,7 @@ a {
   color: #8d1a20;
   text-decoration: none;
   padding: 0px 10px;
-  line-height: 3.5;
+  line-height: 1.5;
 }
 
 a:hover,
@@ -2185,7 +2185,7 @@ a:focus {
   color: #7e060c;
   text-decoration: underline;
   padding: 0px 10px;
-  line-height: 3.5;
+  line-height: 1.5;
 }
 
 h1,
@@ -3300,5 +3300,5 @@ code {
 
 #breadcrumb_links_vertical {
   vertical-align: bottom;
-  line-height: 45px;
+  line-height: 18px;
 }
