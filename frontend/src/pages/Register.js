@@ -2,6 +2,7 @@ import { Container, Form, Col, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../layout/Layout";
+import registerimg from "../images/register_icon.png";
 // import { toast } from "react-toastify";
 
 const Register = ({ setAuth }) => {
@@ -56,7 +57,10 @@ const Register = ({ setAuth }) => {
               RegisterPage
             </Breadcrumb.Item>
           </Breadcrumb>
-          <h1 className="red-letters mt-5 text-center">Register</h1>
+          <div className="img-product">
+            <img src={registerimg} alt="Register Icon" />
+          </div>
+          <h2 className="red-letters">Register</h2>
           <Form onSubmit={onSubmitForm}>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
