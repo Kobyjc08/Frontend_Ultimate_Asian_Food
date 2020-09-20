@@ -23,42 +23,80 @@ const FAQ = () => {
           className="col-md-12 col-xs-12 col-sm-12 big-banner"
           alt="aboutImage"
         />
-        <ul class="list-unstyled blockquote2">
-          <li class="media">
-            <img src={faqimg} class="mr-3" alt="FAQ Icon" />
-            <div class="media-body">
-              <h4 class="mt-0 mb-1 new-titles">How Can I Track My Order?</h4>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </li>
-          <li class="media my-4">
-            <img src={faqimg} class="mr-3" alt="FAQ Icon" />
-            <div class="media-body">
-              <h4 class="mt-0 mb-1 new-titles">
-                Which Payments Are Available?
+        <div id="accordion" className="panel-group">
+          <div className="panel panel-warning">
+            <div className="panel-heading">
+              <h4 className="panel-title">
+                <a
+                  href="#panelBodyOne"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                >
+                  How Can I Track My Order?
+                </a>
               </h4>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
-          </li>
-          <li class="media">
-            <img src={faqimg} class="mr-3" alt="FAQ Icon" />
-            <div class="media-body">
-              <h4 class="mt-0 mb-1 new-titles">
-                Can I Pick My Order At Your Company?
+            <div id="panelBodyOne" className="panel-collapse collapse">
+              <div className="panel-body">
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                  nisi vulputate fringilla. Donec lacinia congue felis in
+                  faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="panel panel-warning">
+            <div className="panel-heading">
+              <h4 className="panel-title">
+                <a
+                  href="#panelBodyTwo"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                >
+                  Which Payments Are Available?
+                </a>
               </h4>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-              scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-              vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-              nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
-          </li>
-        </ul>
+            <div id="panelBodyTwo" className="panel-collapse collapse">
+              <div className="panel-body">
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                  nisi vulputate fringilla. Donec lacinia congue felis in
+                  faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="panel panel-warning">
+            <div className="panel-heading">
+              <h4 className="panel-title">
+                <a
+                  href="#panelBodyThree"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                >
+                  Can I Pick My Order At Your Company?
+                </a>
+              </h4>
+            </div>
+            <div id="panelBodyThree" className="panel-collapse collapse">
+              <div className="panel-body">
+                <p>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                  nisi vulputate fringilla. Donec lacinia congue felis in
+                  faucibus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </Layout>
   );
