@@ -3,6 +3,9 @@ import { Layout } from "../layout/Layout";
 import { Container, Breadcrumb } from "react-bootstrap";
 import faqImage from "../images/faq_main_xl.jpg";
 import faqimg from "../images/faq_icon.png";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const FAQ = () => {
   return (
@@ -23,80 +26,85 @@ const FAQ = () => {
           className="col-md-12 col-xs-12 col-sm-12 big-banner"
           alt="aboutImage"
         />
-        <div id="accordion" className="panel-group">
-          <div className="panel panel-warning">
-            <div className="panel-heading">
-              <h4 className="panel-title">
-                <a
-                  href="#panelBodyOne"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                >
-                  How Can I Track My Order?
-                </a>
-              </h4>
-            </div>
-            <div id="panelBodyOne" className="panel-collapse collapse">
-              <div className="panel-body">
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                  nisi vulputate fringilla. Donec lacinia congue felis in
-                  faucibus.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="panel panel-warning">
-            <div className="panel-heading">
-              <h4 className="panel-title">
-                <a
-                  href="#panelBodyTwo"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                >
-                  Which Payments Are Available?
-                </a>
-              </h4>
-            </div>
-            <div id="panelBodyTwo" className="panel-collapse collapse">
-              <div className="panel-body">
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                  nisi vulputate fringilla. Donec lacinia congue felis in
-                  faucibus.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="panel panel-warning">
-            <div className="panel-heading">
-              <h4 className="panel-title">
-                <a
-                  href="#panelBodyThree"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                >
-                  Can I Pick My Order At Your Company?
-                </a>
-              </h4>
-            </div>
-            <div id="panelBodyThree" className="panel-collapse collapse">
-              <div className="panel-body">
-                <p>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                  scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                  vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                  nisi vulputate fringilla. Donec lacinia congue felis in
-                  faucibus.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Accordion defaultActiveKey="0">
+          <Card
+            style={{
+              backgroundColor: "#8d1a20",
+              color: "white",
+              marginTop: "30px",
+            }}
+          >
+            <Card.Header>
+              <Accordion.Toggle
+                as={Button}
+                style={{ color: "#faf28e" }}
+                variant="link"
+                eventKey="0"
+              >
+                How Can I Order?
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+                You can order easily using our online platform. When you find a
+                product you need, you can add it to cart, login and go through
+                the ordering process. After the order is ready, you will receive
+                order summary to your email. Order summary will also be stored
+                to your account.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card
+            style={{
+              backgroundColor: "#8d1a20",
+              color: "white",
+              marginTop: "10px",
+            }}
+          >
+            <Card.Header>
+              <Accordion.Toggle
+                as={Button}
+                style={{ color: "#faf28e" }}
+                variant="link"
+                eventKey="1"
+              >
+                Why should I buy online?
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
+                Nowadays by ordering online you're not only speeding up the
+                shopping process but also relieving pressure on the traditional
+                stores during Covid Times. You will get prices faster and you
+                will be able to go through order confirmation and payment
+                process much faster. This could save days of your time.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card
+            style={{
+              backgroundColor: "#8d1a20",
+              color: "white",
+              marginTop: "10px",
+            }}
+          >
+            <Card.Header>
+              <Accordion.Toggle
+                as={Button}
+                style={{ color: "#faf28e" }}
+                variant="link"
+                eventKey="1"
+              >
+                What payment methods can I use?
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="2">
+              <Card.Body>
+                You can use all the major credit cards and Pay Pal.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
       </Container>
     </Layout>
   );
