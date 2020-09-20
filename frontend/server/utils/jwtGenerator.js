@@ -4,10 +4,12 @@ if (process.env.NODE_ENV!=="production") {
 }
 
 
-function jwtGenerator(user_id) {
+function jwtGenerator(user) {
   const payload = {
     user: {
-      id: user_id
+      email: user.user_email,
+      id: user.user_id,
+      name: user.user_firstname
     }
   };
   

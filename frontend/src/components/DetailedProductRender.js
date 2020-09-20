@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useState} from "react";
 import { Button, Container, Col, Image } from 'react-bootstrap';
 import { getImages } from "../images/products/products";
+import axios from "axios";
+
 
 
 
 const RenderProduct = ({data}) => {
+  
+  const [Qty, setQty] = useState(0);
+
+  const handlerAddShoppingCart = async() => {
+    let id = localStorage.getItem("id"); // get id from logged-user
+
+    //get order items from user-id 
+    let {data} =  await axios.get(`http://localhost:5000/order/${id}`);
+
+    //validation if data (there are orders for that id? is it empty)
+    let order = data
+    if(order.length < 1) { 
+      console.log("entro")
+      order = await axios.post('http://localhost:5000/order', {
+        customer_id : id
+      })
+    }
+
+     console.log(order)
+    
+  }
+
+
+
+
   if (data.length < 1) {
     return <p>Loading...</p>
   }
@@ -43,7 +70,7 @@ const RenderProduct = ({data}) => {
                         </select>
                 </div>
                 <div className="add-cart-button">
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" onClick={handlerAddShoppingCart}>
                 <i className="fa fa-shopping-cart"></i>
             Add to Cart
           </Button>
