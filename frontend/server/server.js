@@ -62,26 +62,26 @@ app.get("/productsByID/:productid", function (req, res) {
 });
 
 //GET SHOPPING CART BY USER ID =>  order Items (for Shopping-Cart)
-app.get("/orderItems/:customerId", function (req, res) {
-  const customerId = req.params.customerId;
+app.get("/order/:user_id", function (req, res) {
+  const user_id = req.params.user_id;
   pool
     .query(
-      "select o.order_reference, p.product_name, p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join customers c on o.customer_id=c.id where c.id=$1",
-      [customerId]
+      "select o.order_date, p.product_name, p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
+      [user_id]
     )
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
 });
 
 //CREATE AN ORDER   (for Shopping-Cart)
-app.post("/orders", function (req, res) {
-  const { order_reference, customer_id } = req.body;
+app.post("/order", function (req, res) {
+  const { customer_id } = req.body;
   let now = new Date();
   let query =
-    "INSERT INTO orders ( order_date, order_reference, customer_id ) VALUES ($1, $2, $3)";
+    "INSERT INTO orders ( order_date, customer_id ) VALUES ($1, $2)";
   pool
-    .query(query, [now, order_reference, customer_id])
-    .then((result) => res.status(201).send("Order Created!!"))
+    .query(query, [now, customer_id])
+    .then(() => res.status(201).send("Order Created!!"))
     .catch((error) => {
       console.log(error);
       res.status(500).send("something went wrong...!");

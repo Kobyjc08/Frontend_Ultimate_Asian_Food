@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Breadcrumb } from "react-bootstrap";
+import {useParams} from 'react-router-dom'
 import axios from "axios";
 import { Layout } from "../layout/Layout";
 import Company from "../components/Company.js";
@@ -9,13 +10,14 @@ import DetailedProductRender from '../components/DetailedProductRender';
 
 const DetailedProduct = () => {
 
+  const {id} = useParams();
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/productsByID/6").then(function (response) {
+    axios.get(`http://localhost:5000/productsByID/${id}`).then(function (response) {
       setProduct(response.data);
     });
-  }, []);
+  }, [id]);
 
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 

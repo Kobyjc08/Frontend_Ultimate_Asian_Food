@@ -36,6 +36,7 @@ const Login = ({ setAuth }) => {
 
       if (parseRes.jwtToken) {
         localStorage.setItem("token", parseRes.jwtToken);
+        localStorage.setItem("id", parseRes.id);
         setAuth(true);
         // toast.success("Logged in Successfully");
       } else {
