@@ -19,7 +19,11 @@ const About = () => {
         </div>
 
         <h2 className="red-letters">About Us</h2>
-        <img src={aboutImage} alt="aboutImage" />
+        <img
+          className="col-md-12 col-xs-12 col-sm-12 big-banner"
+          src={aboutImage}
+          alt="aboutImage"
+        />
         <div className="blockquote2">
           We are a professional e-shop for Asian food articles in Spain.
           Established in 2020, this idea was born beacuse the community of

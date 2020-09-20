@@ -1515,14 +1515,15 @@ STYLE SWITCHER FOR DEMO
 
 .btn-primary:hover {
   color: #fff !important;
+  padding: 0.375rem 0.75rem;
   background-color: #8d1a20;
   border-color: #8d1a20;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(79, 191, 168, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(79, 191, 168, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 235, 115, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(233, 235, 115, 0.5);
 }
 
 .btn-primary.disabled,
@@ -1543,8 +1544,8 @@ STYLE SWITCHER FOR DEMO
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(79, 191, 168, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(79, 191, 168, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 235, 115, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(233, 235, 115, 0.5);
 }
 
 .btn-secondary {
@@ -3301,4 +3302,29 @@ code {
 #breadcrumb_links_vertical {
   vertical-align: bottom;
   line-height: 18px;
+}
+
+/*
+ * 12. ACCORDION
+ */
+
+#accordion {
+  margin: 20px;
+}
+
+.panel-group .panel,
+.panel-heading {
+  border-radius: 0;
+}
+
+.panel-heading {
+  height: 60px;
+}
+
+.panel-primary {
+  border: none;
+}
+
+.panel-title a {
+  text-decoration: none;
 }

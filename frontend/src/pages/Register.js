@@ -2,6 +2,7 @@ import { Container, Form, Col, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../layout/Layout";
+import registerimg from "../images/register_icon.png";
 // import { toast } from "react-toastify";
 
 const Register = ({ setAuth }) => {
@@ -56,7 +57,10 @@ const Register = ({ setAuth }) => {
               RegisterPage
             </Breadcrumb.Item>
           </Breadcrumb>
-          <h1 className="mt-5 text-center">Register</h1>
+          <div className="img-product">
+            <img src={registerimg} alt="Register Icon" />
+          </div>
+          <h2 className="red-letters">Register</h2>
           <Form onSubmit={onSubmitForm}>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
@@ -65,7 +69,7 @@ const Register = ({ setAuth }) => {
                   type="text"
                   name="firstname"
                   value={firstname}
-                  placeholder="firstname"
+                  placeholder="First Name"
                   onChange={(e) => onChange(e)}
                 />
               </Form.Group>
@@ -76,7 +80,7 @@ const Register = ({ setAuth }) => {
                   type="text"
                   name="lastname"
                   value={lastname}
-                  placeholder="Lastname"
+                  placeholder="Last Name"
                   onChange={(e) => onChange(e)}
                 />
               </Form.Group>
@@ -88,7 +92,7 @@ const Register = ({ setAuth }) => {
                 type="text"
                 name="email"
                 value={email}
-                placeholder="Enter Email"
+                placeholder="Enter E-mail"
                 onChange={(e) => onChange(e)}
               />
             </Form.Group>
@@ -121,14 +125,14 @@ const Register = ({ setAuth }) => {
                 type="text"
                 name="DNI"
                 value={DNI}
-                placeholder="DNI/NIE/PassPort"
+                placeholder="DNI/NIE/Passport"
                 onChange={(e) => onChange(e)}
               />
             </Form.Group>
 
             <button className="btn btn-success btn-block">Submit</button>
           </Form>
-          <Link to="/login">login Here</Link>
+          <Link to="/login">Login Here</Link>
         </Container>
       </Layout>
     </Fragment>

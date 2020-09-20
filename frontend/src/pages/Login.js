@@ -1,7 +1,8 @@
 import { Layout } from "../layout/Layout";
 import { Container, Form, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import loginimg from "../images/login_icon.png";
 
 // import { toast } from "react-toastify";
 
@@ -55,9 +56,11 @@ const Login = ({ setAuth }) => {
             LoginPage
           </Breadcrumb.Item>
         </Breadcrumb>
+        <div className="img-product">
+          <img src={loginimg} alt="Login Icon" />
+        </div>
+        <h2 className="red-letters">Login</h2>
         <Fragment>
-          <h1 className="mt-5 text-center">Login</h1>
-
           <Form onSubmit={onSubmitForm}>
             <input
               type="text"
