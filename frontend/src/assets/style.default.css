@@ -3303,28 +3303,3 @@ code {
   vertical-align: bottom;
   line-height: 18px;
 }
-
-/*
- * 12. ACCORDION
- */
-
-#accordion {
-  margin: 20px;
-}
-
-.panel-group .panel,
-.panel-heading {
-  border-radius: 0;
-}
-
-.panel-heading {
-  height: 60px;
-}
-
-.panel-primary {
-  border: none;
-}
-
-.panel-title a {
-  text-decoration: none;
-}
