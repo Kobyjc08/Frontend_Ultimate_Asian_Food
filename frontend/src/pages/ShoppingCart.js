@@ -7,13 +7,22 @@ import Company from "../components/Company.js";
 import CartRender from '../components/Cart'
 
 const ShoppingCart = () => {
-
+  let user_id = localStorage.getItem("id"); // get id from logged-user
   const [Cart, setCart] = useState([]);
-
+  const [total, setTotal] = useState(0);
+  const [sumItems, setSumItems] = useState(0);
+  
+  console.log(sumItems)
   useEffect(() => {
-    axios.get("http://localhost:5000/productsByCategory/Desserts").then(function (response) {
+    axios.get(`http://localhost:5000/orderDetails/${user_id}`).then(function (response) {
       setCart(response.data);
-      console.group(response.data);
+      let totalPrice = 0;
+      let totalItems = response.data.length
+      response.data.forEach(product => {
+        totalPrice = totalPrice + product.unit_price
+      })
+      setTotal(totalPrice);
+      setSumItems(totalItems);
     });
   }, []);
 
@@ -26,7 +35,7 @@ const ShoppingCart = () => {
         </Breadcrumb>
         <h3 className="red-letters">
         - Your Cart -</h3>
-        <CartRender data={Cart}/>
+        <CartRender data={Cart} total={total} totalItems={sumItems}/>
         <Company />
       </Container>
     </Layout>

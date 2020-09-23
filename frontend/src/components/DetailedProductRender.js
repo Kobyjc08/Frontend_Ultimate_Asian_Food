@@ -8,24 +8,37 @@ import axios from "axios";
 
 const RenderProduct = ({data}) => {
   
-  const [Qty, setQty] = useState(0);
-
+  const [Qty, setQty] = useState(1);
+  const onChange = (e) => {
+    setQty(e.target.value)
+  }
   const handlerAddShoppingCart = async() => {
-    let id = localStorage.getItem("id"); // get id from logged-user
+    let user_id = localStorage.getItem("id"); // get id from logged-user
 
     //get order items from user-id 
-    let {data} =  await axios.get(`http://localhost:5000/order/${id}`);
-
+    let {data:order} =  await axios.get(`http://localhost:5000/order/${user_id}`);
+    
     //validation if data (there are orders for that id? is it empty)
-    let order = data
+    let newItem;
     if(order.length < 1) { 
-      console.log("entro")
-      order = await axios.post('http://localhost:5000/order', {
-        customer_id : id
+      let newOrder = await axios.post('http://localhost:5000/order', {
+        customer_id : user_id
+      })
+      
+      newItem = await axios.post('http://localhost:5000/orderItems', {
+        order_id: newOrder.data.order.id,
+        product_id: data.id,
+        quantity: Qty
+      })
+    } else {
+      newItem = await axios.post('http://localhost:5000/orderItems', {
+        order_id: order[0].id,
+        product_id: data.id,
+        quantity: Qty
       })
     }
 
-     console.log(order)
+     console.log(newItem)
     
   }
 
@@ -58,7 +71,7 @@ const RenderProduct = ({data}) => {
                 <h4 className="cart-price">€{data.unit_price}</h4>
                 </div>
                 <div className="qty-detailed-product">
-                    <select>
+                    <select onChange={(e) => onChange(e)}>
                         <option value="1">Qty: 1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
