@@ -109,7 +109,7 @@ code {
   width: 7rem;
 }
 
-.cart-price{
+.cart-price {
   align-items: flex-start;
   justify-content: center;
   margin-left: 2.7rem;
@@ -120,50 +120,50 @@ code {
   align-items: center;
 }
 .cart-main {
-display: flex;
-flex-direction: row;
-align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-.subtotal-cart-list{
+.subtotal-cart-list {
   display: flex;
   justify-content: flex-end;
 }
-.cart-action{
+.cart-action {
   background-color: lightgrey;
   margin-left: 1rem;
   width: 30%;
   padding: 1rem;
 }
-.checkout-button{
+.checkout-button {
   width: 100%;
 }
-.title-price{
+.title-price {
   display: flex;
   justify-content: flex-end;
 }
 /*Product detailed css Jorge*/
-.main-detailed-product{
+.main-detailed-product {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
 }
 
-.image-product-detail{
+.image-product-detail {
   display: flex;
   background-color: #8d1a20;
   width: 50%;
   justify-content: center;
   margin-right: 1rem;
 }
-.info-product-detailed{
-display:flex;
-flex-direction: column;
-background-color: white;
-width: 50%;
+.info-product-detailed {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 50%;
 }
 .price-detailed-product {
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 1rem;
@@ -176,21 +176,21 @@ width: 50%;
   margin-right: 2rem;
   margin-top: 1rem;
 }
-.name-detailed-product{
+.name-detailed-product {
   margin-left: 1rem;
   margin-top: 1rem;
 }
-.qty-detailed-product{
+.qty-detailed-product {
   margin-left: 1rem;
   size: 10rem;
   margin-top: 1rem;
 }
-.description-detailed-p{
+.description-detailed-p {
   text-justify: auto;
   margin-left: 1rem;
 }
-.add-cart-button{
-  display:flex;
+.add-cart-button {
+  display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 1rem;
@@ -198,13 +198,13 @@ width: 50%;
 }
 /* Jorge Css - end */
 
-/* Ehsan search */
-.topnav input[type="text"] {
-  float: right;
-  padding: 2px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 12px;
-  font-size: 12px;
+/* ehsan dashboard */
+.dashboard-class {
+  display: flex;
+  justify-content: space-between;
 }
-/* Ehsan search-end */
+
+.customCard {
+  background-color: #faf28e;
+}
+/* ehsan dashboard end */
