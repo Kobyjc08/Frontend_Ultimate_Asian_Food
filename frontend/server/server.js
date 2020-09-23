@@ -56,22 +56,35 @@ app.get("/productsByID/:productid", function (req, res) {
   const productId = req.params.productid;
   console.log(req.params.productid);
   pool
-    .query("select * from products p inner join  categories c on p.category_id=c.id where p.id=$1", [productId])
+    .query("select * from products p where p.id=$1", [productId])
     .then((result) => res.json(result.rows[0]))
     .catch((e) => console.error(e));
 });
 
 //GET SHOPPING CART BY USER ID =>  order Items (for Shopping-Cart)
-app.get("/order/:user_id", function (req, res) {
+app.get("/orderDetails/:user_id", function (req, res) {
   const user_id = req.params.user_id;
   pool
     .query(
-      "select o.order_date, p.product_name, p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
+      "select o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
       [user_id]
     )
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
 });
+
+//VALIDATE IF THERE IS AN EXISTING order: 
+app.get("/order/:user_id", function (req, res) {
+  const user_id = req.params.user_id;
+  pool
+    .query(
+      "select * from orders o where o.customer_id =$1",
+      [user_id]
+    )
+    .then((result) => res.json(result.rows))
+    .catch((e) => console.error(e));
+});
+
 
 //CREATE AN ORDER   (for Shopping-Cart)
 app.post("/order", function (req, res) {
@@ -81,7 +94,11 @@ app.post("/order", function (req, res) {
     "INSERT INTO orders ( order_date, customer_id ) VALUES ($1, $2)";
   pool
     .query(query, [now, customer_id])
-    .then(() => res.status(201).send("Order Created!!"))
+    .then(() => pool.query("select * from orders where customer_id=$1", [customer_id])
+    .then ((data) => res.status(201).send({
+      order:data.rows[0], 
+      message:"Order Created!!"
+    })))
     .catch((error) => {
       console.log(error);
       res.status(500).send("something went wrong...!");

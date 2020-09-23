@@ -11,6 +11,7 @@ import DetailedProductRender from '../components/DetailedProductRender';
 const DetailedProduct = () => {
 
   const {id} = useParams();
+  
   const [product, setProduct] = useState([]);
 
   useEffect(() => {

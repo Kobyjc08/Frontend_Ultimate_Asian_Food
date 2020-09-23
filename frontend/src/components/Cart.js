@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { ul, li, Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { getImages } from "../images/products/products";
 
 
 
-const Cart = ({data}) => {
+const Cart = ({data, total, sumItems}) => {
+
+  
+
   if (data.length < 1) {
     return <p>Loading...</p>
   }
@@ -45,11 +48,11 @@ const Cart = ({data}) => {
         )
         }
         )}
-            <h3 className="subtotal-cart-list">Subtotal (5 items): € 18 </h3>
+            <h3 className="subtotal-cart-list">Subtotal ({sumItems} items): € {total} </h3>
         
         </Container>
         <div className="cart-action">
-            <h4>Subtotal ({data.length} items): € 18 </h4>
+            <h4>Subtotal ({sumItems} items): € {total} </h4>
             <div className=" d-flex justify-content-end">
               <Link to="#" className="btn btn-primary checkout-button">
                 <span>Proceed to checkout</span>
