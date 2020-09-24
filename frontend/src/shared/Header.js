@@ -24,8 +24,8 @@ export const Header = () => {
           <Link to="/" className="nav-link2 active">
             Home
           </Link>
-          <Link to="/Login" className="nav-link2">
-            Login
+          <Link to="/About" className="nav-link2">
+            About
           </Link>
           <NavDropdown title="Categories" id="collasible-nav-dropdown">
             <NavDropdown.Item>
@@ -45,6 +45,18 @@ export const Header = () => {
               </Link>
             </NavDropdown.Item>
           </NavDropdown>
+          <Link to="/Faq" className="nav-link2">
+            FAQ
+          </Link>
+          <Link to="/Contact" className="nav-link2">
+            Contact
+          </Link>
+          <Link to="/Login" className="nav-link2">
+            Login
+          </Link>
+          <Link to="/Register" className="nav-link2">
+            Register
+          </Link>
         </Nav>
         <Nav>
           <div className="navbar-buttons d-flex justify-content-end">
