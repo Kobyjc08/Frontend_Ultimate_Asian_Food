@@ -655,12 +655,12 @@ h1 {
 * CONTENT
 * ======================================================================
 *
-*/
+
 #content .card.sidebar-menu {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
-
+*/
 #content .card.sidebar-menu .card-header .btn.btn-danger {
   color: #fff;
 }
@@ -678,7 +678,9 @@ h1 {
   display: inline-block;
   width: 15px;
   height: 15px;
+  /*
   border: solid 1px #555;
+  */
   vertical-align: top;
   margin-top: 2px;
   margin-left: 5px;
@@ -721,7 +723,7 @@ h1 {
 #content .card.sidebar-menu ul.nav.category-menu {
   margin-bottom: 20px;
 }
-
+/*
 #content .card.sidebar-menu ul.nav.category-menu li a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -737,7 +739,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
 }
-
+ */
 #content .card.sidebar-menu ul.nav.category-menu li a:not(.active):hover {
   background: #eeeeee;
 }
@@ -787,7 +789,9 @@ h1 {
 
 #content .product {
   background: #fff;
+  /*
   border: solid 1px #e6e6e6;
+*/
   margin-bottom: 30px;
   /* entire container, keeps perspective */
   /* flip speed goes here */
@@ -1590,12 +1594,14 @@ STYLE SWITCHER FOR DEMO
 
 .btn-success {
   color: #fff;
+  padding: 0.375rem 0.75rem;
   background-color: #8d1a20;
   border-color: #8d1a20;
 }
 
 .btn-success:hover {
   color: #fff;
+  padding: 0.375rem 0.75rem;
   background-color: #58050a;
   border-color: #58050a;
 }
@@ -1722,6 +1728,7 @@ STYLE SWITCHER FOR DEMO
 
 .btn-danger:focus,
 .btn-danger.focus {
+  padding: 0.375rem 0.75rem;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
@@ -1737,6 +1744,7 @@ STYLE SWITCHER FOR DEMO
 .btn-danger:not(:disabled):not(.disabled).active,
 .show > .btn-danger.dropdown-toggle {
   color: #fff;
+  padding: 0.375rem 0.75rem;
   background-color: #bd2130;
   border-color: #b21f2d;
 }
@@ -1744,6 +1752,7 @@ STYLE SWITCHER FOR DEMO
 .btn-danger:not(:disabled):not(.disabled):active:focus,
 .btn-danger:not(:disabled):not(.disabled).active:focus,
 .show > .btn-danger.dropdown-toggle:focus {
+  padding: 0.375rem 0.75rem;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
@@ -1870,6 +1879,7 @@ STYLE SWITCHER FOR DEMO
 
 .btn-outline-secondary {
   color: #8d1a20;
+  padding: 0.375rem 0.75rem;
   background-color: transparent;
   background-image: none;
   border-color: #8d1a20;
@@ -1877,6 +1887,7 @@ STYLE SWITCHER FOR DEMO
 
 .btn-outline-secondary:hover {
   color: #fff;
+  padding: 0.375rem 0.75rem;
   background-color: #8d1a20;
   border-color: #8d1a20;
 }
@@ -2185,7 +2196,6 @@ a:hover,
 a:focus {
   color: #7e060c;
   text-decoration: underline;
-  padding: 0px 10px;
   line-height: 1.5;
 }
 
@@ -3101,8 +3111,15 @@ code {
 /*
 * 8. NAV
 */
-.nav-link {
+.nav-link2 {
   padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 30px 15px !important;
+  color: #555;
 }
 
 .nav-link.disabled {
@@ -3192,7 +3209,9 @@ code {
 .card-header {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
+  /*
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  */
 }
 
 .card-header:first-child {
@@ -3207,7 +3226,9 @@ code {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f8f9fa;
+  /*
   border-top: 1px solid rgba(0, 0, 0, 0.07);
+   */
 }
 
 .card-footer:last-child {
