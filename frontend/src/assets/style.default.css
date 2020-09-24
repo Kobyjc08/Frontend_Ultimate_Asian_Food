@@ -176,6 +176,7 @@ h1 {
 .navbar .navbar-nav > .nav-item > .nav-link:hover,
 .navbar .navbar-nav > .nav-item > .nav-link:focus {
   color: #8d1a20;
+  text-decoration: none;
 }
 
 @media (max-width: 991.98px) {
@@ -2195,7 +2196,7 @@ a {
 a:hover,
 a:focus {
   color: #7e060c;
-  text-decoration: underline;
+  text-decoration: none;
   line-height: 1.5;
 }
 
