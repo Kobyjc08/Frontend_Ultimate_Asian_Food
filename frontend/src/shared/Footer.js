@@ -23,8 +23,9 @@ export const Footer = () => {
               </a>
             </p>
             <p className="text-center text-lg-left">
-              <a href="https:#">Shop</a>|<a href="https:#">Return</a>|
-              <a href="https:#">Delivery</a>|<a href="https:#">Contact</a>
+              <a href="https:/ShoppingCart">Shop</a>|
+              <a href="https:#">Return</a>|<a href="https:#">Delivery</a>|
+              <a href="https:/Contact">Contact</a>
             </p>
           </div>
           <div className="col-lg-6 mb-2 mb-lg-0">
