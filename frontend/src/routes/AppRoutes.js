@@ -20,6 +20,7 @@ import Lentils from "../pages/lentils-rices-flours";
 import Dashboard from "../pages/Dashboard";
 import ShoppingCart from '../pages/ShoppingCart';
 import DetailedProduct from '../pages/DetailedProductPage';
+import Checkout from '../pages/Checkout';
 
 
 
@@ -63,6 +64,7 @@ export const AppRouter = () => {
          <Route exact path="/categories/Lentils-Rice-Flour" component={Lentils}/>
          <Route exact path="/ShoppingCart" component={ShoppingCart}/>
          <Route exact path="/DetailedProduct/:id" component={DetailedProduct}/>
+         <Route exact path="/checkout" component={Checkout}/>
         <Route
           exact
           path="/register"
