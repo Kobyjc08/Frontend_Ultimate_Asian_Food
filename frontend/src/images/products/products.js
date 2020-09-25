@@ -10,14 +10,14 @@ import Fish from "./Fish-09.png";
 import White from "./White-10.png";
 import Broast from "./Broast-11.png";
 
-import Basmati from "./Basmati-Rice.jpg";
-import Coriander from "./Coriander-Powder.jpg";
-import Cumin from "./Cumin-Powder.jpg";
-import Kideny from "./Kideny-Beans.jpg";
-import Red from "./Red-Chilli-Powder.jpg";
-import Split from "./Split-Chick-Peas.jpg";
+import Basmati from "./Basmati-Rice.png";
+import Coriander from "./Coriander-Powder.png";
+import Cumin from "./Cumin-Powder.png";
+import Kideny from "./Kideny-Beans.png";
+import Red from "./Red-Chilli-Powder.png";
+import Split from "./Split-Chick-Peas.png";
 import Wheat from "./Wheat-Flour.png";
-import Turmeric from "./Turmeric-Powder.jpg";
+import Turmeric from "./Turmeric-Powder.png";
 
 export const getImages = (image) =>
   ({
