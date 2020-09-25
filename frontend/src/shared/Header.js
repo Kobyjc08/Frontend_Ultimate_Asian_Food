@@ -6,7 +6,7 @@ import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar2">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           src={logoLg}
           alt="The Ultimate Asian Food Eshop Logo"
