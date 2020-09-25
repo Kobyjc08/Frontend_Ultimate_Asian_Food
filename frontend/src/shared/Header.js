@@ -1,12 +1,20 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, DropdownButton } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Dropdown,
+  Button,
+  Form,
+  FormControl,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar2">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           src={logoLg}
           alt="The Ultimate Asian Food Eshop Logo"
@@ -58,6 +66,10 @@ export const Header = () => {
             Register
           </Link>
         </Nav>
+        <Form inline>
+          <FormControl type="text" className="mr-sm-2" />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
         <Nav>
           <div className="navbar-buttons d-flex justify-content-end">
             <Link
