@@ -66,7 +66,7 @@ app.get("/orderDetails/:user_id", function (req, res) {
   const user_id = req.params.user_id;
   pool
     .query(
-      "select o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
+      "select o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity, oi.id from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
       [user_id]
     )
     .then((result) => res.json(result.rows))
@@ -242,7 +242,16 @@ app.post("/login", function (req, res) {
 
 // Not finished yet
 //GET CHECKOUT INFO  ( SHIPPING ADDRESS - PAYMENT METHOD - PAYMENT SUCCESFULL)
-app.get("/checkout/:userId");
+app.get("/checkout/:user_id", function (req, res) {
+  const user_id = req.params.user_id;
+  pool
+    .query(
+      "select u.firstname ,u.address , u.lastname , u.dni , o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
+      [user_id]
+    )
+    .then((result) => res.json(result.rows))
+    .catch((e) => console.error(e));
+});
 
 // MANAGE PRODUCT  =>>> OPTIONAL FROM HERE // OR FROM THE DATA BASE OR //FROM ADMIN DASHBOARD
 app.post("/product", function (req, res) {
