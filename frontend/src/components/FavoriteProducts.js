@@ -1,37 +1,36 @@
 import React from "react";
-import { Row } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import { getImages } from "../images/products/products";
 
-
-const favoriteProducts = ({data}) => {
+const favoriteProducts = ({ data }) => {
   if (data.length < 1) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
   return (
     <div>
-      
-      <Row id='favorite-products-cards' className='cards'>
+      <Row id="favorite-products-cards" className="cards">
         {data.map((product, index) => {
           return (
             <CardDeck key={index}>
               <Card className="card-render">
                 <Card.Img
-                  variant='top'
+                  variant="top"
                   src={getImages(product.product_pic)}
-                  className='card-image'
+                  className="card-image"
                 />
                 <Card.Body className="car-body-render">
                   <Card.Title>
                     <Link
                       to={`/DetailedProduct/${product.id}`}
-                      className='btn btn-primary'>
+                      className="btn btn-primary"
+                    >
                       {product.product_name}
                     </Link>
                   </Card.Title>
-                  <Card.Text className='card-info'>
+                  <Card.Text className="card-info">
                     €{product.unit_price}
                   </Card.Text>
                 </Card.Body>
@@ -45,7 +44,6 @@ const favoriteProducts = ({data}) => {
 };
 
 export default favoriteProducts;
-
 
 /*const Products = [
     {
