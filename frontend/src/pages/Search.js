@@ -28,7 +28,9 @@ const Search = () => {
             Search
           </Breadcrumb.Item>
         </Breadcrumb>
-        <h3 className="red-letters">- Your Search Result for {product} -</h3>
+        <h1 className="red-letters">
+          - Your Search Results for.... <i>{product}</i> -
+        </h1>
         <FavoriteProducts data={searchProduct} />
         <Company />
       </Container>

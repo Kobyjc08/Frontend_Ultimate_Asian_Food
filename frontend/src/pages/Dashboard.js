@@ -90,7 +90,7 @@ const Dashboard = ({ setAuth }) => {
           </Card>
           <Card style={{ width: "30rem" }} className="customCard">
             <Card.Body>
-              <h2 className="red-letters">Your Personal Detail</h2>
+              <h2 className="red-letters">Your Personal Details</h2>
               <Card.Subtitle className="mb-2 text-muted">
                 Your account details
               </Card.Subtitle>
