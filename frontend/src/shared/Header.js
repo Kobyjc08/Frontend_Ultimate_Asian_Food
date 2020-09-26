@@ -100,7 +100,7 @@ export const Header = () => {
               className="btn btn-primary navbar-btn"
             >
               <i className="fa fa-shopping-cart"></i>
-              <span>0 items in cart</span>
+              <span>0 items</span>
             </Link>
           </div>
         </Nav>
