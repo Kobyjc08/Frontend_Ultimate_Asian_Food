@@ -209,6 +209,37 @@ code {
 .unit-price-cart {
   margin-left: 1rem;
 }
+
+.display-checkout-cart{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.name-p-cart{
+  display: left;
+  width: 50%;
+}
+
+.checkout-main{
+  display:flex;
+  flex-direction: row;
+}
+.card-checkout{
+  display:flex;
+  width:100%;
+  margin-left: 1rem;
+}
+
+.personal-checkout-d{
+  display:flex;
+  margin-left: 1rem;
+  font-size: 18px;
+}
+.p-d-checkout{
+  margin-top: 1rem;
+  margin-left:1rem;
+}
 /* Jorge Css - end */
 
 /* ehsan dashboard */

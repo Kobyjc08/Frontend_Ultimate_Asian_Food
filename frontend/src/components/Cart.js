@@ -18,7 +18,6 @@ const Cart = ({data, total, totalItems,removeItem, price}) => {
         <Container>
         <h4 className="title-price">Price</h4>
         {data.map ((product, index) => {
-          console.log(product)
             return (
     <div key={index}>
         <ul className="list-unstyled">
