@@ -2791,6 +2791,24 @@ select.form-control-lg:not([size]):not([multiple]) {
   height: calc(2.6875rem + 2px);
 }
 
+.form-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.containerLinks {
+  display: flex;
+  flex-direction: column !important;
+  width: auto;
+}
+
+.containerLinks1,
+.containerLinks2 {
+  display: flex;
+  width: 100%;
+}
+
 .valid-feedback {
   display: none;
   width: 100%;
@@ -3121,7 +3139,11 @@ code {
   letter-spacing: 0.1em;
   font-size: 11px;
   font-weight: 700;
-  color: #555;
+  color: #555 !important;
+}
+
+.nav-link2:hover {
+  color: #8d1a20 !important;
 }
 
 .nav-link.disabled {
@@ -3136,6 +3158,21 @@ code {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+
+#collasible-nav-dropdown {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555 !important;
+}
+
+#collasible-nav-dropdown:hover {
+  color: #8d1a20 !important;
 }
 
 .nav-tabs .nav-link:hover,

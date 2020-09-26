@@ -19,8 +19,8 @@ code {
 
 .navbar2 {
   margin-bottom: 30px;
-  margin-right: 60px;
-  margin-left: 60px;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .carrousel_wrap {
@@ -210,35 +210,34 @@ code {
   margin-left: 1rem;
 }
 
-.display-checkout-cart{
+.display-checkout-cart {
   display: flex;
   flex-direction: row;
-  
 }
 
-.name-p-cart{
+.name-p-cart {
   display: left;
   width: 50%;
 }
 
-.checkout-main{
-  display:flex;
+.checkout-main {
+  display: flex;
   flex-direction: row;
 }
-.card-checkout{
-  display:flex;
-  width:100%;
+.card-checkout {
+  display: flex;
+  width: 100%;
   margin-left: 1rem;
 }
 
-.personal-checkout-d{
-  display:flex;
+.personal-checkout-d {
+  display: flex;
   margin-left: 1rem;
   font-size: 18px;
 }
-.p-d-checkout{
+.p-d-checkout {
   margin-top: 1rem;
-  margin-left:1rem;
+  margin-left: 1rem;
 }
 /* Jorge Css - end */
 
