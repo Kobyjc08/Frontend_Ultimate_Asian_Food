@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   Nav,
@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
 export const Header = () => {
+  const [name, setName] = useState("");
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar2">
       <Navbar.Brand href="/">
@@ -67,8 +68,22 @@ export const Header = () => {
           </Link>
         </Nav>
         <Form inline>
-          <FormControl type="text" className="mr-sm-2" />
-          <Button variant="outline-primary">Search</Button>
+          <FormControl
+            type="text"
+            name="name"
+            placeholder="Search here ..."
+            value={name}
+            className="mr-sm-2"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Link to={`/Search/${name}`}>
+            <Button
+              variant="outline-primary"
+              onClick="window.location.reload();"
+            >
+              Search
+            </Button>
+          </Link>
         </Form>
         <Nav>
           <div className="navbar-buttons d-flex justify-content-end">

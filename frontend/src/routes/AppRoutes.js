@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-
   Route,
   Redirect,
 } from "react-router-dom";
@@ -18,11 +17,10 @@ import AsianTraditionalFood from "../pages/Asian-Traditional-Food";
 import Spices from "../pages/Spices";
 import Lentils from "../pages/lentils-rices-flours";
 import Dashboard from "../pages/Dashboard";
-import ShoppingCart from '../pages/ShoppingCart';
-import DetailedProduct from '../pages/DetailedProductPage';
-import Checkout from '../pages/Checkout';
-
-
+import ShoppingCart from "../pages/ShoppingCart";
+import DetailedProduct from "../pages/DetailedProductPage";
+import Checkout from "../pages/Checkout";
+import Search from "../pages/Search";
 
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
@@ -32,7 +30,7 @@ export const AppRouter = () => {
         headers: { jwt_token: localStorage.token },
       });
 
-    const parseRes = await res.json();
+      const parseRes = await res.json();
 
       parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
     } catch (err) {
@@ -51,20 +49,29 @@ export const AppRouter = () => {
   };
   return (
     <Router>
-
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/product-detail" component={ProductDetailed} />
         <Route exact path="/About" component={About} />
         <Route exact path="/FAQ" component={FAQ} />
         <Route exact path="/Contact" component={Contact} />
-         <Route exact path="/categories/Desserts" component={Desserts}/> 
-         <Route exact path="/categories/Traditional-Food" component={AsianTraditionalFood}/> 
-         <Route exact path="/categories/Spices" component={Spices}/> 
-         <Route exact path="/categories/Lentils-Rice-Flour" component={Lentils}/>
-         <Route exact path="/ShoppingCart" component={ShoppingCart}/>
-         <Route exact path="/DetailedProduct/:id" component={DetailedProduct}/>
-         <Route exact path="/checkout" component={Checkout}/>
+        <Route exact path="/categories/Desserts" component={Desserts} />
+        <Route
+          exact
+          path="/categories/Traditional-Food"
+          component={AsianTraditionalFood}
+        />
+        <Route exact path="/categories/Spices" component={Spices} />
+        <Route
+          exact
+          path="/categories/Lentils-Rice-Flour"
+          component={Lentils}
+        />
+        <Route exact path="/ShoppingCart" component={ShoppingCart} />
+        <Route exact path="/DetailedProduct/:id" component={DetailedProduct} />
+        <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/Search" component={Home} />
+        <Route exact path="/Search/:product" component={Search} />
         <Route
           exact
           path="/register"
@@ -98,9 +105,7 @@ export const AppRouter = () => {
             )
           }
         />
-       
       </Switch>
-
     </Router>
   );
 };
