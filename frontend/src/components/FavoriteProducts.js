@@ -7,7 +7,7 @@ import { getImages } from "../images/products/products";
 
 const favoriteProducts = ({ data }) => {
   if (data.length < 1) {
-    return <p>Loading...</p>;
+    return <p>No Results Found</p>;
   }
   return (
     <div>

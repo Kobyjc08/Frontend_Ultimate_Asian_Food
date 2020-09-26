@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
-const pool =require('./db');
-if (process.env.NODE_ENV!=="production") {
+const pool = require("./db");
+if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
@@ -44,7 +44,7 @@ app.get("/products/:productName", function (req, res) {
   const productName = req.params.productName;
   console.log(req.params.productName);
   pool
-    .query("select * from products  where product_name like $1", [
+    .query("select * from products  where product_name ILIKE $1", [
       `%${productName}%`,
     ])
     .then((result) => res.json(result.rows))
@@ -73,32 +73,32 @@ app.get("/orderDetails/:user_id", function (req, res) {
     .catch((e) => console.error(e));
 });
 
-//VALIDATE IF THERE IS AN EXISTING order: 
+//VALIDATE IF THERE IS AN EXISTING order:
 app.get("/order/:user_id", function (req, res) {
   const user_id = req.params.user_id;
   pool
-    .query(
-      "select * from orders o where o.customer_id =$1",
-      [user_id]
-    )
+    .query("select * from orders o where o.customer_id =$1", [user_id])
     .then((result) => res.json(result.rows))
     .catch((e) => console.error(e));
 });
-
 
 //CREATE AN ORDER   (for Shopping-Cart)
 app.post("/order", function (req, res) {
   const { customer_id } = req.body;
   let now = new Date();
-  let query =
-    "INSERT INTO orders ( order_date, customer_id ) VALUES ($1, $2)";
+  let query = "INSERT INTO orders ( order_date, customer_id ) VALUES ($1, $2)";
   pool
     .query(query, [now, customer_id])
-    .then(() => pool.query("select * from orders where customer_id=$1", [customer_id])
-    .then ((data) => res.status(201).send({
-      order:data.rows[0], 
-      message:"Order Created!!"
-    })))
+    .then(() =>
+      pool
+        .query("select * from orders where customer_id=$1", [customer_id])
+        .then((data) =>
+          res.status(201).send({
+            order: data.rows[0],
+            message: "Order Created!!",
+          })
+        )
+    )
     .catch((error) => {
       console.log(error);
       res.status(500).send("something went wrong...!");
@@ -330,5 +330,7 @@ app.get("/orderItems/:customerId", function (req, res) {
 });
 
 app.listen(process.env.NODE_PORT, function () {
-  console.log(`Server is listening on port ${process.env.NODE_PORT}. Ready to accept requests!`);
+  console.log(
+    `Server is listening on port ${process.env.NODE_PORT}. Ready to accept requests!`
+  );
 });
