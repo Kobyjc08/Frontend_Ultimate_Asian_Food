@@ -3137,7 +3137,7 @@ code {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #555 !important;
 }
@@ -3166,7 +3166,7 @@ code {
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #555 !important;
 }
