@@ -19,12 +19,15 @@ code {
 
 .navbar2 {
   margin-bottom: 30px;
-  margin-right: 60px;
-  margin-left: 60px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .carrousel_wrap {
-  padding: 0 2rem;
+  padding-top: 0px;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
 }
 /* ehsan-Company-component*/
 .heading-company {
@@ -41,8 +44,7 @@ code {
 }
 
 .img-container-about-company {
-  width: 100%;
-  padding-right: 20px;
+  width: 97%;
 }
 
 .container-faq-company {
@@ -52,8 +54,7 @@ code {
 }
 
 .img-container-faq-company {
-  width: 100%;
-  padding-left: 20px;
+  width: 97%;
 }
 /* ehsan-Company-component-end*/
 
@@ -96,14 +97,14 @@ code {
   justify-content: center;
   align-content: center;
   color: #8d1a20;
-  font-size: 2rem;
+  font-size: 1.65rem;
   padding: 1rem;
 }
 
 .img-product {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .favorite-products-cards {
@@ -210,35 +211,34 @@ code {
   margin-left: 1rem;
 }
 
-.display-checkout-cart{
+.display-checkout-cart {
   display: flex;
   flex-direction: row;
-  
 }
 
-.name-p-cart{
+.name-p-cart {
   display: left;
   width: 50%;
 }
 
-.checkout-main{
-  display:flex;
+.checkout-main {
+  display: flex;
   flex-direction: row;
 }
-.card-checkout{
-  display:flex;
-  width:100%;
+.card-checkout {
+  display: flex;
+  width: 100%;
   margin-left: 1rem;
 }
 
-.personal-checkout-d{
-  display:flex;
+.personal-checkout-d {
+  display: flex;
   margin-left: 1rem;
   font-size: 18px;
 }
-.p-d-checkout{
+.p-d-checkout {
   margin-top: 1rem;
-  margin-left:1rem;
+  margin-left: 1rem;
 }
 /* Jorge Css - end */
 
