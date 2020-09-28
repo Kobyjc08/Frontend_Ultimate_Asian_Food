@@ -252,12 +252,16 @@ h1 {
 }
 
 .navbar #basket-overview {
-  padding: 0;
+  padding: 0px;
 }
 
 .navbar .navbar-btn {
   color: #fff;
   border-radius: 50%;
+}
+
+.cart-quantity {
+  text-align: center;
 }
 
 #search {
