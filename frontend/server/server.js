@@ -246,7 +246,7 @@ app.get("/checkout/:user_id", function (req, res) {
   const user_id = req.params.user_id;
   pool
     .query(
-      "select u.firstname ,u.user_email, u.address , u.lastname , u.dni , o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
+      "select u.firstname , u.user_email ,u.address , u.lastname , u.dni ,o.order_reference ,o.order_date,p.product_pic ,p.product_name,p.description ,p.unit_price, oi.quantity from products p inner join order_items oi on p.id=oi.product_id inner join orders o on oi.order_id=o.id inner join users u on o.customer_id=u.user_id where u.user_id=$1",
       [user_id]
     )
     .then((result) => res.json(result.rows))
@@ -330,25 +330,19 @@ app.get("/orderItems/:customerId", function (req, res) {
 });
 
 //Insert payment orderDetails
-app.post("/paymentDetails/", function (req, res) {
-  const {
-    card_number,
-    card_holder_name,
-    card_expire_date,
-    ccv_code,
-    costumer_id,
-  } = req.body;
+
+app.post("/paymentDetails", function (req, res) {
+  const { card_number, card_holder_name, card_expiry_date, cvv_code , customers_id } = req.body;
   let query =
     "INSERT INTO payment_details (card_number, card_holder_name, card_expiry_date , cvv_code , customers_id) VALUES ($1, $2, $3, $4, $5, $6)";
   pool
-    .query(query, [
-      card_number,
-      card_holder_name,
-      card_expiry_date,
-      cvv_code,
-      custumers_id,
-    ])
-    .then((result) => res.status(201).send("Payment method added"))
+    .query(query, [card_number, card_holder_name, card_expiry_date, cvv_code , customers_id])
+    .then((result) =>
+      res
+        .status(201)
+        .send("Payment method added")
+    )
+
     .catch((error) => {
       console.log(error);
       res.status(500).send("Sorry, something went wrong");

@@ -215,6 +215,8 @@ code {
 .display-checkout-cart {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  font-size: 5rem;
 }
 
 .name-p-cart {
@@ -235,18 +237,41 @@ code {
 .personal-checkout-d {
   display: flex;
   margin-left: 1rem;
-  font-size: 18px;
+  font-size: 15px;
 }
 .p-d-checkout {
   margin-top: 1rem;
   margin-left: 1rem;
+}
+
+.cart-action-checkout{
+  display:flex;
+  width: 100%;
+  margin-top: 2rem;
+  
+}
+.subtotal-rght{
+  display:flex;
+  justify-content: flex-end;
+}
+.Cart-pic-c{
+  display:flex;
+  width: 5rem;
+  height: 5rem;
+}
+.checkout-main-Confirmation{
+  display:flex;
+  flex-direction: row;
+}
+.Card-Information{
+  background-color: lightgrey;
 }
 /* Jorge Css - end */
 
 /* ehsan dashboard */
 .dashboard-class {
   display: flex;
-  justify-content: space-between;
+  justify-self: space-between;
 }
 
 .customCard {

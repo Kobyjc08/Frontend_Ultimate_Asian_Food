@@ -6,7 +6,7 @@ import { getImages } from "../images/products/products";
 
 
 
-const Cart = ({data, total, totalItems,removeItem, price}) => {
+const Cart = ({data, total, totalItems,removeItem}) => {
 
 
   

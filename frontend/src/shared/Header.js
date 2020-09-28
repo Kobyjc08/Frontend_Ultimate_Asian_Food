@@ -8,10 +8,21 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
+
+
 export const Header = () => {
+  const [sumItems, setSumItems] = useState(0);
+  let user_id = localStorage.getItem("id"); // get id from logged-user
+  useEffect(() => {
+    axios.get(`http://localhost:5000/checkout/${user_id}`).then(function (response) {
+      let totalItems = response.data.length;
+      setSumItems(totalItems);
+    });
+  }, []);
   const [name, setName] = useState("");
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar2">
@@ -101,7 +112,9 @@ export const Header = () => {
               className="btn btn-primary navbar-btn"
             >
               <i className="fa fa-shopping-cart"></i>
-              <div className="cart-quantity">0</div>
+
+              <span>{sumItems}</span>
+
             </Link>
           </div>
         </Nav>
