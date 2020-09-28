@@ -21,6 +21,7 @@ import ShoppingCart from "../pages/ShoppingCart";
 import DetailedProduct from "../pages/DetailedProductPage";
 import Checkout from "../pages/Checkout";
 import Search from "../pages/Search";
+import ConfirmationPage from "../pages/ConfirmationOrder"
 
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
@@ -70,6 +71,7 @@ export const AppRouter = () => {
         <Route exact path="/ShoppingCart" component={ShoppingCart} />
         <Route exact path="/DetailedProduct/:id" component={DetailedProduct} />
         <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/ConfirmationOrder" component={ConfirmationPage}/>
         <Route exact path="/Search" component={Home} />
         <Route exact path="/Search/:product" component={Search} />
         <Route

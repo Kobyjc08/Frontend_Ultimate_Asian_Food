@@ -26,7 +26,7 @@ const CheckoutR = ({data, total, totalItems, price}) => {
     try {
       const body = { card_number, card_holder_name, card_expiry_date, cvv_code, customers_id };
       const response = await fetch(
-        "http://localhost:5000/authentication/register",
+        "http://localhost:5000/paymentDetails",
         {
           method: "POST",
           headers: {
@@ -45,16 +45,16 @@ const CheckoutR = ({data, total, totalItems, price}) => {
   return (
     <div className="checkout-main">
     <Card className="card-checkout">
-      <h3 className="p-d-checkout">Personal Details</h3>
+      <h4 className="p-d-checkout">Personal Details</h4>
       <div className="personal-checkout-d">Name : {data[0].firstname} {data[0].lastname} </div>
       <div className="personal-checkout-d">Email : {data[0].user_email} </div>
       <div className="personal-checkout-d">DNI/Passaport : {data[0].dni}</div>
-      <h3 className="p-d-checkout">Shipping Details</h3>
+      <h4 className="p-d-checkout">Shipping Details</h4>
     <div className="personal-checkout-d">Shipping address: {data[0].address}</div>
-
+    <h4 className="p-d-checkout">Payment Method</h4>
     <Form onSubmit={onSubmitForm}>
            
-              <Form.Group as={Col} controlId="formGridEmail">
+              <Form.Group  as={Col}  controlId="formGridEmail">
                 <Form.Label>Card Number</Form.Label>
                 <Form.Control
                   type="text"
@@ -76,7 +76,7 @@ const CheckoutR = ({data, total, totalItems, price}) => {
                 />
               </Form.Group>
             
-             <Form.Row>
+            <Form.Row>
             <Form.Group as={Col}> 
               <Form.Label>Security Code CCV</Form.Label>
               <Form.Control
@@ -98,7 +98,7 @@ const CheckoutR = ({data, total, totalItems, price}) => {
                 onChange={(e) => onChange(e)}
               />
             </Form.Group>
-            </Form.Row>
+          </Form.Row>
     </Form>
     </Card>
     
@@ -109,27 +109,27 @@ const CheckoutR = ({data, total, totalItems, price}) => {
         <div key={index}>
         <ul className="list-unstyled">
           <li className="media">
-              <img src={getImages(product.product_pic)} className="mr-3 Cart-pic" alt="CartProducts"/>
+              <img src={getImages(product.product_pic)} className="mr-3 Cart-pic-c" alt="CartProducts"/>
               <div className="media-body display-checkout-cart">
               <h4 className="mt-0 mb-1 name-p-cart">{product.product_name}</h4>
               <h5 className="unit-price-cart ">Qty:{product.quantity}</h5>
               <h5 className="unit-price-cart">Price :€{product.unit_price}</h5>
               </div>
-              <h3 className="cart-price">€{product.unit_price * product.quantity}</h3>
+              <h4 className="cart-price">€{product.unit_price * product.quantity}</h4>
             </li>
           </ul>
         </div>
         )
         }
         )}
-        <div className="cart-action">
-            <h4>Subtotal ({totalItems} items): € {total} </h4>
-            <div className=" d-flex justify-content-end">
+        <h4 className="subtotal-rght">Subtotal ({totalItems} items): € {total} </h4>
+        <div className="cart-action-checkout">
+            
               <Link to="#" className="btn btn-primary checkout-button chk-button">
-                <Link to="/checkout">Place and Order!!</Link>
+                <Link to="/ConfirmationOrder">Place and Order!!</Link>
               </Link>
-            </div>
-        </div>
+          
+          </div>
         </Container>
        
     </div>

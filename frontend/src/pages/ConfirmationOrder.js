@@ -4,10 +4,10 @@ import axios from "axios";
 import { Layout } from "../layout/Layout";
 
 
-import CheckoutRender from '../components/CheckoutRender';
+import ConfirmationR from '../components/ConfirmationR';
 
 
-const Checkout = () => {
+const Confirmation = () => {
   
     let user_id = localStorage.getItem("id"); // get id from logged-user
     const [checkoutInfo, setCheckoutInfo] = useState([]);
@@ -32,14 +32,14 @@ const Checkout = () => {
       <Container>
       <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>Checkout</Breadcrumb.Item>
+          <Breadcrumb.Item active>Confirmation page</Breadcrumb.Item>
         </Breadcrumb>
         <h3 className="red-letters">
-        - Checkout process -</h3>
-        <CheckoutRender data={checkoutInfo} total={total} totalItems={sumItems} />
+        - Congratulations! your order has been placed!-</h3>
+        <ConfirmationR data={checkoutInfo} total={total} totalItems={sumItems} />
       </Container>
     </Layout>
   );
 };
 
-export default Checkout;
+export default Confirmation;
