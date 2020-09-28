@@ -331,16 +331,24 @@ app.get("/orderItems/:customerId", function (req, res) {
 
 //Insert payment orderDetails
 app.post("/paymentDetails/", function (req, res) {
-  const { card_number, card_holder_name, card_expire_date, ccv_code , costumer_id } = req.body;
+  const {
+    card_number,
+    card_holder_name,
+    card_expire_date,
+    ccv_code,
+    costumer_id,
+  } = req.body;
   let query =
     "INSERT INTO payment_details (card_number, card_holder_name, card_expiry_date , cvv_code , customers_id) VALUES ($1, $2, $3, $4, $5, $6)";
   pool
-    .query(query, [card_number, card_holder_name, card_expiry_date, cvv_code , custumers_id])
-    .then((result) =>
-      res
-        .status(201)
-        .send("Payment method added")
-    )
+    .query(query, [
+      card_number,
+      card_holder_name,
+      card_expiry_date,
+      cvv_code,
+      custumers_id,
+    ])
+    .then((result) => res.status(201).send("Payment method added"))
     .catch((error) => {
       console.log(error);
       res.status(500).send("Sorry, something went wrong");

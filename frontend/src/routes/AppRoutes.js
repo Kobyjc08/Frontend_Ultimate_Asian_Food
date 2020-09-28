@@ -21,6 +21,10 @@ import ShoppingCart from "../pages/ShoppingCart";
 import DetailedProduct from "../pages/DetailedProductPage";
 import Checkout from "../pages/Checkout";
 import Search from "../pages/Search";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
+toast.configure();
 
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
