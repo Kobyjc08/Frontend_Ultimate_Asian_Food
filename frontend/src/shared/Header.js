@@ -73,8 +73,6 @@ export const Header = () => {
             <Link to="/Faq" className="nav-link2">
               FAQ
             </Link>
-          </div>
-          <div className="containerLinks2">
             <Link to="/Contact" className="nav-link2">
               Contact
             </Link>
@@ -85,24 +83,27 @@ export const Header = () => {
               Register
             </Link>
           </div>
+          <div className="containerLinks2">
+            <form className="form-search">
+              <FormControl
+                type="text"
+                name="name"
+                value={name}
+                className="mr-sm-2"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Link to={`/Search/${name}`}>
+                <Button
+                  variant="outline-primary"
+                  onClick="window.location.reload();"
+                >
+                  Search
+                </Button>
+              </Link>
+            </form>
+          </div>
         </Nav>
-        <form className="form-search">
-          <FormControl
-            type="text"
-            name="name"
-            value={name}
-            className="mr-sm-2"
-            onChange={(e) => setName(e.target.value)}
-          />
-          <Link to={`/Search/${name}`}>
-            <Button
-              variant="outline-primary"
-              onClick="window.location.reload();"
-            >
-              Search
-            </Button>
-          </Link>
-        </form>
+
         <Nav>
           <div className="navbar-buttons d-flex justify-content-end">
             <Link
@@ -111,7 +112,9 @@ export const Header = () => {
               className="btn btn-primary navbar-btn"
             >
               <i className="fa fa-shopping-cart"></i>
+
               <span>{sumItems}</span>
+
             </Link>
           </div>
         </Nav>

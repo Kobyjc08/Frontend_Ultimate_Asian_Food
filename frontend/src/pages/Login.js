@@ -3,8 +3,7 @@ import { Container, Form, Breadcrumb } from "react-bootstrap";
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import loginimg from "../images/login_icon.png";
-
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Login = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
@@ -38,10 +37,10 @@ const Login = ({ setAuth }) => {
         localStorage.setItem("token", parseRes.jwtToken);
         localStorage.setItem("id", parseRes.id);
         setAuth(true);
-        // toast.success("Logged in Successfully");
+        toast.success("Logged in Successfully");
       } else {
         setAuth(false);
-        // toast.error(parseRes);
+        toast.error(parseRes);
       }
     } catch (err) {
       console.error(err.message);

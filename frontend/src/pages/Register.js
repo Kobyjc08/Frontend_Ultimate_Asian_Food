@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "../layout/Layout";
 import registerimg from "../images/register_icon.png";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Register = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
@@ -36,10 +36,10 @@ const Register = ({ setAuth }) => {
       if (parseRes.jwtToken) {
         localStorage.setItem("token", parseRes.jwtToken);
         setAuth(true);
-        // toast.success("Register Successfully");
+        toast.success("Register Successfully");
       } else {
         setAuth(false);
-        // toast.error(parseRes);
+        toast.error(parseRes);
       }
     } catch (err) {
       console.error(err.message);

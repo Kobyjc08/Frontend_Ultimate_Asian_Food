@@ -330,6 +330,7 @@ app.get("/orderItems/:customerId", function (req, res) {
 });
 
 //Insert payment orderDetails
+
 app.post("/paymentDetails", function (req, res) {
   const { card_number, card_holder_name, card_expiry_date, cvv_code , customers_id } = req.body;
   let query =
@@ -341,6 +342,7 @@ app.post("/paymentDetails", function (req, res) {
         .status(201)
         .send("Payment method added")
     )
+
     .catch((error) => {
       console.log(error);
       res.status(500).send("Sorry, something went wrong");
