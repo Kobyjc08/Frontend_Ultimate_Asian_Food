@@ -2824,6 +2824,33 @@ select.form-control-lg:not([size]):not([multiple]) {
   padding-left: 0.5rem;
 }
 
+.columnLinks {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .containerLinks {
+    width: 100%;
+  }
+  .columnLinks {
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto 0 auto;
+  }
+  #cartButton {
+    justify-content: center !important;
+    padding-top: 0.5rem;
+  }
+  .social {
+    text-align: center !important;
+  }
+  .social_special {
+    text-align: center !important;
+  }
+}
+
 .valid-feedback {
   display: none;
   width: 100%;

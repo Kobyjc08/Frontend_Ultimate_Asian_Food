@@ -31,46 +31,50 @@ export const Header = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto containerLinks">
           <div className="containerLinks1">
-            <Link to="/" className="nav-link2 active">
-              Home
-            </Link>
-            <Link to="/About" className="nav-link2">
-              About
-            </Link>
-            <NavDropdown
-              title="Categories"
-              className="linkCategories"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item>
-                <Link to="/categories/Desserts">Desserts</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/categories/Traditional-Food">
-                  Asian Traditional foods
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/categories/Spices">Spices</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="/categories/Lentils-Rice-Flour">
-                  Lentils/Rice/Flour
-                </Link>
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Link to="/Faq" className="nav-link2">
-              FAQ
-            </Link>
-            <Link to="/Contact" className="nav-link2">
-              Contact
-            </Link>
-            <Link to="/Login" className="nav-link2">
-              Login
-            </Link>
-            <Link to="/Register" className="nav-link2">
-              Register
-            </Link>
+            <div className="columnLinks">
+              <Link to="/" className="nav-link2 active">
+                Home
+              </Link>
+              <Link to="/About" className="nav-link2">
+                About
+              </Link>
+              <NavDropdown
+                title="Categories"
+                className="linkCategories"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item>
+                  <Link to="/categories/Desserts">Desserts</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/categories/Traditional-Food">
+                    Asian Traditional foods
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/categories/Spices">Spices</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/categories/Lentils-Rice-Flour">
+                    Lentils/Rice/Flour
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Link to="/Faq" className="nav-link2">
+                FAQ
+              </Link>
+            </div>
+            <div className="columnLinks">
+              <Link to="/Contact" className="nav-link2">
+                Contact
+              </Link>
+              <Link to="/Login" className="nav-link2">
+                Login
+              </Link>
+              <Link to="/Register" className="nav-link2">
+                Register
+              </Link>
+            </div>
           </div>
           <div className="containerLinks2">
             <form className="form-search">
@@ -94,7 +98,10 @@ export const Header = () => {
         </Nav>
 
         <Nav>
-          <div className="navbar-buttons d-flex justify-content-end">
+          <div
+            className="navbar-buttons d-flex justify-content-end"
+            id="cartButton"
+          >
             <Link
               to="/ShoppingCart"
               href="basket.html"
