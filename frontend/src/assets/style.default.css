@@ -2807,6 +2807,8 @@ select.form-control-lg:not([size]):not([multiple]) {
   display: flex;
   flex-direction: column !important;
   width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .containerLinks1 {
