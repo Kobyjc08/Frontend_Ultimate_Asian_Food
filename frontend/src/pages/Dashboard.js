@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Container, Card } from "react-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
 import { Layout } from "../layout/Layout";
-import faqimg from "../images/faq_icon.png";
-// import EditTodo from "../components/EditTodo";
-// import { toast } from "react-toastify";
-
+import faqimg from "../images/account_icon.png";
+import { toast } from "react-toastify";
 const Dashboard = ({ setAuth }) => {
   const [name, setName] = useState("");
   const [name2, setName2] = useState("");
@@ -28,6 +26,7 @@ const Dashboard = ({ setAuth }) => {
       setAddress(parseData[0].address);
       setDNI(parseData[0].dni);
       setorders(parseData);
+      toast.success(parseData);
     } catch (err) {
       console.error(err.message);
     }
@@ -38,7 +37,7 @@ const Dashboard = ({ setAuth }) => {
     try {
       localStorage.removeItem("token");
       setAuth(false);
-      //   toast.success("Logout successfully");
+      toast.success("Logout successfully");
     } catch (err) {
       console.error(err.message);
     }
