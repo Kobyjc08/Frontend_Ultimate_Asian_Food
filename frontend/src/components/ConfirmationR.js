@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { ul, li, Container, Card , Form, Col} from 'react-bootstrap';
+import React from "react";
+import { Card } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { getImages } from "../images/products/products";
+
 
 
 
@@ -31,7 +30,7 @@ const InformationR = ({data, total, totalItems, price}) => {
     <div className="personal-checkout-d">Order Date : {data[0].order_date} </div>
     <div className="personal-checkout-d">Order Total amount : € {total} </div>
     <div className="personal-checkout-d">Order Items: {totalItems} </div>
-    <button className="btn btn-primary checkout-button">Track your Order</button>
+    <Link className="btn btn-primary checkout-button">Track your Order</Link>
 
     </Card>
     </div>

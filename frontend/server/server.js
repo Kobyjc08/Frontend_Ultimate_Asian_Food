@@ -334,7 +334,7 @@ app.get("/orderItems/:customerId", function (req, res) {
 app.post("/paymentDetails", function (req, res) {
   const { card_number, card_holder_name, card_expiry_date, cvv_code , customers_id } = req.body;
   let query =
-    "INSERT INTO payment_details (card_number, card_holder_name, card_expiry_date , cvv_code , customers_id) VALUES ($1, $2, $3, $4, $5, $6)";
+    "INSERT INTO payment_details (card_number, card_holder_name, card_expiry_date , cvv_code , customers_id) VALUES ($1, $2, $3, $4, $5)";
   pool
     .query(query, [card_number, card_holder_name, card_expiry_date, cvv_code , customers_id])
     .then((result) =>

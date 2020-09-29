@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { ul, li, Container, Card , Form, Col} from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container, Card , Form, Col} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import axios from "axios";
+//import axios from "axios";
 import { getImages } from "../images/products/products";
+import Axios from "axios";
 
 
 
 const CheckoutR = ({data, total, totalItems, price}) => {
-  console.log(data)
+  
   let customers_id = localStorage.getItem("id"); // get id from logged-user
   const [inputs, setInputs] = useState({
     card_number: "",
@@ -18,26 +19,38 @@ const CheckoutR = ({data, total, totalItems, price}) => {
 
   const { card_number, card_holder_name, card_expiry_date, cvv_code } = inputs;
 
-  const onChange = (e) =>
-    setInputs({ ...inputs, [e.target.card_number]: e.target.value });
+  const onChange = (e) => {
+    console.log(e.target.name)
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
+  }
+  
 
-  const onSubmitForm = async (e) => {
-    e.preventDefault();
-    try {
-      const body = { card_number, card_holder_name, card_expiry_date, cvv_code, customers_id };
-      const response = await fetch(
-        "http://localhost:5000/paymentDetails",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(body),
-        }
-      )} catch (err) {
-      console.error(err.message);
-       } 
-    } ;
+  const onSubmitForm = async(e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+    if(card_number.length < 1 && 
+      customers_id.length < 1 &&
+      card_holder_name.length < 1 && 
+      card_expiry_date.length < 1 &&
+      cvv_code.length < 1
+      ){
+      console.error("This field can not be empty")
+      return;
+    }
+    try{
+      let {data} = await Axios.post(`http://localhost:5000/paymentDetails`,{
+     ...inputs, 
+     customers_id
+  })
+  console.log(data)
+    } catch(error) {
+      console.log(error)
+    }
+    
+}
+
+  
 
   if (data.length < 1) {
     return <p>Loading...</p>
@@ -78,12 +91,12 @@ const CheckoutR = ({data, total, totalItems, price}) => {
             
             <Form.Row>
             <Form.Group as={Col}> 
-              <Form.Label>Security Code CCV</Form.Label>
+              <Form.Label>Security Code CVV</Form.Label>
               <Form.Control
                 type="text"
-                name="ccv_code"
+                name="cvv_code"
                 value={cvv_code}
-                placeholder="CCV"
+                placeholder="CVV"
                 onChange={(e) => onChange(e)}
               />
             </Form.Group>
@@ -91,14 +104,15 @@ const CheckoutR = ({data, total, totalItems, price}) => {
             <Form.Group as={Col}>
               <Form.Label>Expire date</Form.Label>
               <Form.Control
-                type="text"
-                name="card_expire_date"
+                type="date"
+                name="card_expiry_date"
                 value={card_expiry_date}
-                placeholder="Expire Date"
+                placeholder="Expiry Date"
                 onChange={(e) => onChange(e)}
               />
             </Form.Group>
           </Form.Row>
+          <button type="submit" className="btn btn-success btn-block">Submit</button>
     </Form>
     </Card>
     
@@ -125,8 +139,8 @@ const CheckoutR = ({data, total, totalItems, price}) => {
         <h4 className="subtotal-rght">Subtotal ({totalItems} items): € {total} </h4>
         <div className="cart-action-checkout">
             
-              <Link to="#" className="btn btn-primary checkout-button chk-button">
-                <Link to="/ConfirmationOrder">Place and Order!!</Link>
+              <Link to="/ConfirmationOrder" className="btn btn-primary checkout-button chk-button">
+                Place and Order!!
               </Link>
           
           </div>

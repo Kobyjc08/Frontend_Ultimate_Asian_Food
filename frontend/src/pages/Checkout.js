@@ -25,7 +25,7 @@ const Checkout = () => {
           setTotal(totalPrice);
           setSumItems(totalItems);
         });
-      }, []);
+      }, [user_id]);
     
   return (
     <Layout>

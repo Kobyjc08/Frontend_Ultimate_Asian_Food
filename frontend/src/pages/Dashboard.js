@@ -36,7 +36,9 @@ const Dashboard = ({ setAuth }) => {
     e.preventDefault();
     try {
       localStorage.removeItem("token");
+      localStorage.removeItem("id");
       setAuth(false);
+    
       toast.success("Logout successfully");
     } catch (err) {
       console.error(err.message);

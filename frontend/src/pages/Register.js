@@ -14,8 +14,8 @@ const Register = ({ setAuth }) => {
 
   const { email, password, firstname, lastname, address, DNI } = inputs;
 
-  /*const onChange = (e) =>
-    setInputs({ ...inputs, [e.target.name]: e.target.value });*/
+  const onChange = (e) =>
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
@@ -70,7 +70,7 @@ const Register = ({ setAuth }) => {
                   name="firstname"
                   value={firstname}
                   placeholder="First Name"
-                  //onChange={(e) => onChange(e)}
+                  onChange={(e) => onChange(e)}
                 />
               </Form.Group>
 
@@ -81,7 +81,7 @@ const Register = ({ setAuth }) => {
                   name="lastname"
                   value={lastname}
                   placeholder="Last Name"
-                  //onChange={(e) => onChange(e)}
+                  onChange={(e) => onChange(e)}
                 />
               </Form.Group>
             </Form.Row>
@@ -93,7 +93,7 @@ const Register = ({ setAuth }) => {
                 name="email"
                 value={email}
                 placeholder="Enter E-mail"
-                //onChange={(e) => onChange(e)}
+                onChange={(e) => onChange(e)}
               />
             </Form.Group>
 
@@ -104,7 +104,7 @@ const Register = ({ setAuth }) => {
                 name="password"
                 value={password}
                 placeholder="Enter Password"
-                //onChange={(e) => onChange(e)}
+                onChange={(e) => onChange(e)}
               />
             </Form.Group>
 
@@ -115,7 +115,7 @@ const Register = ({ setAuth }) => {
                 name="address"
                 value={address}
                 placeholder="Address"
-                //onChange={(e) => onChange(e)}
+                onChange={(e) => onChange(e)}
               />
             </Form.Group>
 
@@ -126,7 +126,7 @@ const Register = ({ setAuth }) => {
                 name="DNI"
                 value={DNI}
                 placeholder="DNI/NIE/Passport"
-               // onChange={(e) => onChange(e)}
+               onChange={(e) => onChange(e)}
               />
             </Form.Group>
 
