@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Button,
-  FormControl,
-} from "react-bootstrap";
-import axios from 'axios';
+import { Navbar, Nav, NavDropdown, Button, FormControl } from "react-bootstrap";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import logoLg from "../images/logo_190x104.jpg";
 import logoSm from "../images/logo_120x67.jpg";
-
 
 export const Header = () => {
   const [sumItems, setSumItems] = useState(0);
   let user_id = localStorage.getItem("id"); // get id from logged-user
   useEffect(() => {
-    axios.get(`http://localhost:5000/checkout/${user_id}`).then(function (response) {
-      let totalItems = response.data.length;
-      setSumItems(totalItems);
-    });
+    axios
+      .get(`http://localhost:5000/checkout/${user_id}`)
+      .then(function (response) {
+        let totalItems = response.data.length;
+        setSumItems(totalItems);
+      });
   }, [user_id]);
   const [name, setName] = useState("");
   return (
@@ -95,12 +90,7 @@ export const Header = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               <Link to={`/Search/${name}`}>
-                <Button
-                  variant="outline-primary"
-                 
-                >
-                  Search
-                </Button>
+                <Button variant="outline-primary">Search</Button>
               </Link>
             </form>
           </div>
@@ -118,8 +108,7 @@ export const Header = () => {
             >
               <i className="fa fa-shopping-cart"></i>
 
-              <span>{sumItems}</span>
-
+              <div>{sumItems}</div>
             </Link>
           </div>
         </Nav>

@@ -244,26 +244,25 @@ code {
   margin-left: 1rem;
 }
 
-.cart-action-checkout{
-  display:flex;
+.cart-action-checkout {
+  display: flex;
   width: 100%;
   margin-top: 2rem;
-  
 }
-.subtotal-rght{
-  display:flex;
+.subtotal-rght {
+  display: flex;
   justify-content: flex-end;
 }
-.Cart-pic-c{
-  display:flex;
+.Cart-pic-c {
+  display: flex;
   width: 5rem;
   height: 5rem;
 }
-.checkout-main-Confirmation{
-  display:flex;
+.checkout-main-Confirmation {
+  display: flex;
   flex-direction: row;
 }
-.Card-Information{
+.Card-Information {
   background-color: lightgrey;
 }
 /* Jorge Css - end */
@@ -276,5 +275,10 @@ code {
 
 .customCard {
   background-color: #faf28e;
+  border: none !important;
+}
+
+.logoutButton {
+  text-align: center;
 }
 /* ehsan dashboard end */

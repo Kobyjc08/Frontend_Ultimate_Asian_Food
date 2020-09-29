@@ -38,7 +38,7 @@ const Dashboard = ({ setAuth }) => {
       localStorage.removeItem("token");
       localStorage.removeItem("id");
       setAuth(false);
-    
+
       toast.success("Logout successfully");
     } catch (err) {
       console.error(err.message);
@@ -104,9 +104,11 @@ const Dashboard = ({ setAuth }) => {
             </Card.Body>
           </Card>
         </div>
-        <button onClick={(e) => logout(e)} className="btn btn-primary">
-          Logout
-        </button>
+        <div className="logoutButton">
+          <button onClick={(e) => logout(e)} className="btn btn-primary">
+            Logout
+          </button>
+        </div>
       </Container>
     </Layout>
   );
