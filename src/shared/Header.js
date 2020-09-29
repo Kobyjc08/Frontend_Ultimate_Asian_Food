@@ -10,7 +10,7 @@ export const Header = () => {
   let user_id = localStorage.getItem("id"); // get id from logged-user
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/checkout/${user_id}`)
+      .get(`https://ultimate-asian-food-e-shop.herokuapp.com/checkout/${user_id}`)
       .then(function (response) {
         let totalItems = response.data.length;
         setSumItems(totalItems);

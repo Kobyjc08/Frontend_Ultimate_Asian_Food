@@ -10,7 +10,7 @@ const AsianTraditionalFood = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/productsByCategory/Asian")
+      .get("https://ultimate-asian-food-e-shop.herokuapp.com/productsByCategory/Asian")
       .then(function (response) {
         setAsianTraditionalFood(response.data);
         console.group(response.data);

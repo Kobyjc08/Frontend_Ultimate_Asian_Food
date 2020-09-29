@@ -10,7 +10,7 @@ const Species = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/productsByCategory/Spices")
+      .get("https://ultimate-asian-food-e-shop.herokuapp.com/productsByCategory/Spices")
       .then(function (response) {
         setSpicesCategorie(response.data);
         console.group(response.data);

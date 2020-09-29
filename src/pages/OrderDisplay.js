@@ -4,7 +4,7 @@ const [reference, setreference] = useState("");
   const getCustomerOrders = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/orderItems/${customerID}`
+        `https://ultimate-asian-food-e-shop.herokuapp.com/orderItems/${customerID}`
       );
       const jsonData = await response.json();
 
