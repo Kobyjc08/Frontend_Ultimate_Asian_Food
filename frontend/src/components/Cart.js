@@ -45,8 +45,8 @@ const Cart = ({data, total, totalItems,removeItem}) => {
         <div className="cart-action">
             <h4>Subtotal ({totalItems} items): € {total} </h4>
             <div className=" d-flex justify-content-end">
-              <Link to="#" className="btn btn-primary checkout-button">
-                <Link to="/checkout">Proceed to checkout</Link>
+              <Link to="/checkout" className="btn btn-primary checkout-button">
+                Proceed to checkout
               </Link>
             </div>
         </div>

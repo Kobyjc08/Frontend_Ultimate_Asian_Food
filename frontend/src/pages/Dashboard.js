@@ -77,8 +77,8 @@ const Dashboard = ({ setAuth }) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {orders.map((order) => (
-                    <tr key={order.id}>
+                  {orders.map((order, index) => (
+                    <tr key={index}>
                       <td>{order.id}</td>
                       <td>{order.quantity}</td>
                       <td>{order.product_name}</td>
