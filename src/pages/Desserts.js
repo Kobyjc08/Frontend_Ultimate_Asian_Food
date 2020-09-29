@@ -10,7 +10,7 @@ const Desserts = () => {
 
   useEffect(() => {
     axios
-      .get("https://ultimate-asian-food-e-shop.herokuapp.com/productsByCategory/Desserts")
+      .get("https://ultimate-asian-food-e-shop.herokuapp.com:5000/productsByCategory/Desserts")
       .then(function (response) {
         setdessertsCategories(response.data);
         console.group(response.data);

@@ -12,7 +12,7 @@ const Search = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ultimate-asian-food-e-shop.herokuapp.com/products/${product}`)
+      .get(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/products/${product}`)
       .then(function (response) {
         setsearchProduct(response.data);
         console.group(response.data);

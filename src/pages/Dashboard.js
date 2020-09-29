@@ -14,7 +14,7 @@ const Dashboard = ({ setAuth }) => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("https://ultimate-asian-food-e-shop.herokuapp.com/dashboard/", {
+      const res = await fetch("https://ultimate-asian-food-e-shop.herokuapp.com:5000/dashboard/", {
         method: "POST",
         headers: { jwt_token: localStorage.token },
       });

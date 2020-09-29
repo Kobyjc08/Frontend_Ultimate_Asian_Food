@@ -33,7 +33,7 @@ toast.configure();
 export const AppRouter = () => {
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("https://ultimate-asian-food-e-shop.herokuapp.com/authentication/verify", {
+      const res = await fetch("https://ultimate-asian-food-e-shop.herokuapp.com:5000/authentication/verify", {
         method: "POST",
         headers: { jwt_token: localStorage.token },
       });

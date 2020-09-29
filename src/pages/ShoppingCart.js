@@ -13,7 +13,7 @@ const ShoppingCart = () => {
   const [sumItems, setSumItems] = useState(0);
 
   const  removeItem = (id) => {
-      axios.delete(`https://ultimate-asian-food-e-shop.herokuapp.com/orderItems/${id}`).then(function (response) {
+      axios.delete(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/orderItems/${id}`).then(function (response) {
           console.log(response);
         });
       let orderItem = Cart.findIndex(item => item.id===id) ;
@@ -23,7 +23,7 @@ const ShoppingCart = () => {
   
   
   useEffect(() => {
-    axios.get(`https://ultimate-asian-food-e-shop.herokuapp.com/orderDetails/${user_id}`).then(function (response) {
+    axios.get(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/orderDetails/${user_id}`).then(function (response) {
       setCart(response.data);
       let totalPrice = 0;
       let totalItems = response.data.length;

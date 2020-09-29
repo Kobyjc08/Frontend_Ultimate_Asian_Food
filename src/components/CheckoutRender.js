@@ -39,7 +39,7 @@ const CheckoutR = ({data, total, totalItems, price}) => {
       return;
     }
     try{
-      let {data} = await Axios.post(`https://ultimate-asian-food-e-shop.herokuapp.com/paymentDetails`,{
+      let {data} = await Axios.post(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/paymentDetails`,{
      ...inputs, 
      customers_id
   })
