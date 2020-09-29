@@ -17,7 +17,7 @@ const Search = () => {
         setsearchProduct(response.data);
         console.group(response.data);
       });
-  }, []);
+  }, [product]);
 
   return (
     <Layout>

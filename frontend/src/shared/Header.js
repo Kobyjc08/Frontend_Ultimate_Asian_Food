@@ -3,9 +3,7 @@ import {
   Navbar,
   Nav,
   NavDropdown,
-  Dropdown,
   Button,
-  Form,
   FormControl,
 } from "react-bootstrap";
 import axios from 'axios';
@@ -22,7 +20,7 @@ export const Header = () => {
       let totalItems = response.data.length;
       setSumItems(totalItems);
     });
-  }, []);
+  }, [user_id]);
   const [name, setName] = useState("");
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar2">
@@ -95,7 +93,7 @@ export const Header = () => {
               <Link to={`/Search/${name}`}>
                 <Button
                   variant="outline-primary"
-                  onClick="window.location.reload();"
+                 
                 >
                   Search
                 </Button>

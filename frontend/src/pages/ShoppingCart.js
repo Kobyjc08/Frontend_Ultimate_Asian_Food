@@ -13,7 +13,6 @@ const ShoppingCart = () => {
   const [sumItems, setSumItems] = useState(0);
 
   const  removeItem = (id) => {
-    console.log(id)
       axios.delete(`http://localhost:5000/orderItems/${id}`).then(function (response) {
           console.log(response);
         });
@@ -34,7 +33,7 @@ const ShoppingCart = () => {
       setTotal(totalPrice);
       setSumItems(totalItems);
     });
-  }, [Cart]);
+  }, [Cart, user_id]);
 
 
   return (

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { ul, li, Container } from 'react-bootstrap';
+import React from "react";
+import { Container } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import axios from "axios";
+
 import { getImages } from "../images/products/products";
 
 
