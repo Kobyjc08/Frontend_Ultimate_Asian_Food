@@ -9,7 +9,7 @@ const ProductDetailed = () => {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://ultimate-asian-food-e-shop.herokuapp.com:5000/favorites").then(function (response) {
+    axios.get("http://localhost:5000/favorites").then(function (response) {
       setFavoriteProducts(response.data);
       console.group(response.data);
     });

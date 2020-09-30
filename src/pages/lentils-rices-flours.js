@@ -10,7 +10,7 @@ const LentilsRicesFlour = () => {
 
   useEffect(() => {
     axios
-      .get("https://ultimate-asian-food-e-shop.herokuapp.com:5000/productsByCategory/Lentils")
+      .get("http://localhost:5000/productsByCategory/Lentils")
       .then(function (response) {
         setlentilsRiceCategorie(response.data);
         console.group(response.data);

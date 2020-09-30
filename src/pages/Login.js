@@ -21,7 +21,7 @@ const Login = ({ setAuth }) => {
     try {
       const body = { email, password };
       const response = await fetch(
-        "https://ultimate-asian-food-e-shop.herokuapp.com:5000/authentication/login",
+        "http://localhost:5000/authentication/login",
         {
           method: "POST",
           headers: {

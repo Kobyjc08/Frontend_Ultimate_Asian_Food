@@ -22,7 +22,7 @@ const Register = ({ setAuth }) => {
     try {
       const body = { email, password, firstname, lastname, address, DNI };
       const response = await fetch(
-        "https://ultimate-asian-food-e-shop.herokuapp.com:5000/authentication/register",
+        "http://localhost:5000/authentication/register",
         {
           method: "POST",
           headers: {

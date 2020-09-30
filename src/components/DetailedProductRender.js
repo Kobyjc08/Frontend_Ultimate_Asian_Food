@@ -16,22 +16,22 @@ const RenderProduct = ({data}) => {
     let user_id = localStorage.getItem("id"); // get id from logged-user
 
     //get order items from user-id 
-    let {data:order} =  await axios.get(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/order/${user_id}`);
+    let {data:order} =  await axios.get(`http://localhost:5000/order/${user_id}`);
     
     //validation if data (there are orders for that id? is it empty)
     let newItem;
     if(order.length < 1) { 
-      let newOrder = await axios.post('https://ultimate-asian-food-e-shop.herokuapp.com:5000/order', {
+      let newOrder = await axios.post('http://localhost:5000/order', {
         customer_id : user_id
       })
       
-      newItem = await axios.post('https://ultimate-asian-food-e-shop.herokuapp.com:5000/orderItems', {
+      newItem = await axios.post('http://localhost:5000/orderItems', {
         order_id: newOrder.data.order.id,
         product_id: data.id,
         quantity: Qty
       })
     } else {
-      newItem = await axios.post('https://ultimate-asian-food-e-shop.herokuapp.com:5000/orderItems', {
+      newItem = await axios.post('http://localhost:5000/orderItems', {
         order_id: order[0].id,
         product_id: data.id,
         quantity: Qty

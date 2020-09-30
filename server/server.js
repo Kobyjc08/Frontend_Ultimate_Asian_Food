@@ -7,9 +7,9 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 const pool = require("./db");
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
+// if (process.env.NODE_ENV !== "production") {
+//   require("dotenv").config();
+// }
 
 //routes
 
@@ -332,16 +332,24 @@ app.get("/orderItems/:customerId", function (req, res) {
 //Insert payment orderDetails
 
 app.post("/paymentDetails", function (req, res) {
-  const { card_number, card_holder_name, card_expiry_date, cvv_code , customers_id } = req.body;
+  const {
+    card_number,
+    card_holder_name,
+    card_expiry_date,
+    cvv_code,
+    customers_id,
+  } = req.body;
   let query =
     "INSERT INTO payment_details (card_number, card_holder_name, card_expiry_date , cvv_code , customers_id) VALUES ($1, $2, $3, $4, $5)";
   pool
-    .query(query, [card_number, card_holder_name, card_expiry_date, cvv_code , customers_id])
-    .then((result) =>
-      res
-        .status(201)
-        .send("Payment method added")
-    )
+    .query(query, [
+      card_number,
+      card_holder_name,
+      card_expiry_date,
+      cvv_code,
+      customers_id,
+    ])
+    .then((result) => res.status(201).send("Payment method added"))
 
     .catch((error) => {
       console.log(error);
@@ -349,7 +357,7 @@ app.post("/paymentDetails", function (req, res) {
     });
 });
 
-app.listen(process.env.NODE_PORT, function () {
+app.listen(5000, function () {
   console.log(
     `Server is listening on port ${process.env.NODE_PORT}. Ready to accept requests!`
   );

@@ -15,7 +15,7 @@ const Confirmation = () => {
     const [sumItems, setSumItems] = useState(0);
     
     useEffect(() => {
-        axios.get(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/checkout/${user_id}`).then(function (response) {
+        axios.get(`http://localhost:5000/checkout/${user_id}`).then(function (response) {
           setCheckoutInfo(response.data);
           let totalPrice = 0;
           let totalItems = response.data.length;

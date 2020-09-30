@@ -15,7 +15,7 @@ const DetailedProduct = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    axios.get(`https://ultimate-asian-food-e-shop.herokuapp.com:5000/productsByID/${id}`).then(function (response) {
+    axios.get(`http://localhost:5000/productsByID/${id}`).then(function (response) {
       setProduct(response.data);
     });
   }, [id]);
@@ -23,7 +23,7 @@ const DetailedProduct = () => {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://ultimate-asian-food-e-shop.herokuapp.com:5000/favorites").then(function (response) {
+    axios.get("http://localhost:5000/favorites").then(function (response) {
       setFavoriteProducts(response.data);
     });
   }, []);
